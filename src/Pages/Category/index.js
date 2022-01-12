@@ -5,7 +5,6 @@ import ProductList from '../../components/ProductList';
 import SideBar from '../../components/Sidebar';
 import TopBar from '../../components/TopBar';
 import {FlexContainer,Wrapper} from './style';
-
 const Category = () => {
     const [product , setProduct] = useState(true)
 

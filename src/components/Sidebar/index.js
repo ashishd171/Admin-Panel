@@ -53,7 +53,6 @@ const SideBar = () => {
                             <DropdownItem className="dropdownItem">Персонал</DropdownItem>
                         </DropdownMenu>
                         </UncontrolledDropdown>
-
                     </UnorderList>
                 </MenuBar>
             </Sidebar>
