@@ -10,6 +10,9 @@ export const Input = styled.input`
     margin-bottom:16px;
     width: 360px;
     padding: 9px;
+    &:focus{
+        outline: none !important;
+    }
 `
 export const Label = styled.label`
     margin-bottom: 6px;

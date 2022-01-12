@@ -8,13 +8,16 @@ import Orders from './Pages/Orders';
 import Settings from './Pages/Settings';
 import FinanceList from './Pages/Finance/FinanceList';
 import FinanceChart from './Pages/Finance/FinanceChart';
+import Hall from './Pages/Hall';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-        
+          <Route  path="/hall">
+            <Hall />
+          </Route>
           <Route  path="/financechart">
             <FinanceChart />
           </Route>

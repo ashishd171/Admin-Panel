@@ -4,7 +4,7 @@ import Button from '../AddButtonNew'
 import SearchInput from '../SearchInput';
 import ViewButton from '../ViewButton';
 
-const HomepageHeader = ({showInput,listgridbtn, productDesign,handleProduct}) => {
+const Header = ({showInput,listgridbtn, productDesign,handleProduct}) => {
     return (
         <Wrapper>
             <Title>Головна</Title>
@@ -21,4 +21,4 @@ const HomepageHeader = ({showInput,listgridbtn, productDesign,handleProduct}) =>
     );
 }
 
-export default HomepageHeader;
+export default Header;

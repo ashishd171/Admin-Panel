@@ -15,7 +15,6 @@ const HomePage = () => {
                     <SideBar />
                     <DashBoard showInput={false}>
                         <TodayIncomeCard />
-                        {/* <CatagoryItemEdit /> */}
                     </DashBoard>
                 </div>
             </Wrapper>

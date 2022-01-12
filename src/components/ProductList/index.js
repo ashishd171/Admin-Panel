@@ -1,6 +1,5 @@
 import React from 'react';
-import { Wrapper,ProdTable,TableRow,TableData,Image,Span,TableHeadingFirst,TableHeadingPhoto,
-        TableHeadingStatus, TableHeadingNizwa, TableHeadingEdit, Anchor} from './style'
+import { Wrapper,ProdTable,TableRow,TableData,Image,Span,TableHeadingFirst,TableHeadingPhoto,TableHeadingStatus, TableHeadingNizwa, TableHeadingEdit, Anchor} from './style'
 import { HiOutlinePencil } from "react-icons/hi";
 
 const ProductList = () => {

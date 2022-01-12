@@ -6,14 +6,17 @@ export const Wrapper = styled.div`
     flex-wrap: Wrap;
 `
 export const Image = styled.img`
-    width: 258px;
+    // width: 258px;
+    width: ${prop => prop.Category ?  '258px' : '200px' };
+
 
 `
 export const Anchor = styled.a`
-    color: #fff;
+    color: ${prop => prop.Category ?  '#ffffff' : '#1890FF' };
+
     display: flex;
     :hover{
-        color: #fff;
+        color: ${prop => prop.Category ?  '#ffffff' : '#1890FF' };
     }
 `
 
@@ -29,27 +32,29 @@ export const Name = styled.p`
 `
 export const Card = styled.div`
     width: 258px;
+    width: ${prop => prop.Category ?  '258px' : '200px' };
     margin: 10px;
 `
 export const BottomSection = styled.div`
     display: flex;
     background: #FFFFFF;
-    padding: 14px;    
+    padding: ${prop => prop.Category ?  '14px 16px' : ' 7px 16px' };
 `
 export const Dot = styled.span`
     background: green;
     border-radius: 50%;
-    display: inline-block;
+    // display: inline-block;
+    display:  ${prop => prop.Category ? 'inline-block' : 'none'};
     width: 8px;
     height: 8px;
     margin-right: 7px;
 `
 export const Edit = styled.div`
-    Width: 24px;
+    Width: 24px;    
     Height: 22px;
-    background: #FFC107;
+    background: ${prop => prop.Category ? '#FFC107' : 'transparent'};
     border-radius: 2px;
-    color: #ffffff;
+    // color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;

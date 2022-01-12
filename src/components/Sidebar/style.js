@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
         border: none;
         width: 98%;
         text-align: left;
-
         list-style-type: none;
         font-family: Roboto;
         font-style: normal;
@@ -32,7 +31,6 @@ export const Wrapper = styled.div`
         margin-top: 4px;
         margin-left: 5px;
     }
-
         :focus{
             outline: none;
             background-color: white;

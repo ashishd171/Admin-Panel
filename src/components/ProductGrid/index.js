@@ -2,25 +2,18 @@ import React from 'react';
 import {Edit,Dot,Wrapper,Name,Card,BottomSection,Image,Anchor} from './style'
 import { HiOutlinePencil } from "react-icons/hi";
 
-const ProductGrid = () => {
-    const Table = [
-        {Image: "./images/Pizzaimage.png", name: "Піца"},
-        {Image: "./images/Pizzaimage.png", name: "Піца"},
-        {Image: "./images/Pizzaimage.png", name: "Піца"},
-        {Image: "./images/Pizzaimage.png", name: "Піца"},
-        {Image: "./images/Pizzaimage.png", name: "Піца"},
-        {Image: "./images/Pizzaimage.png", name: "Піца"},
-    ] 
+const ProductGrid = ({CardStructure, Cardtype}) => {
+     console.log(CardStructure,Cardtype==="Category")
     return (
         <Wrapper>
-            {Table.map((item, index)=>{
+            {CardStructure?.map((item, index)=>{
                 return(
-                    <Card>
-                    <Image  src={item.Image} />
-                    <BottomSection>
-                        <Name><Dot></Dot>{item.name}</Name>
-                        <Edit>
-                            <Anchor href=""><HiOutlinePencil  /></Anchor>
+                    <Card Category={Cardtype==="Category"}>
+                    <Image  src={item.Image} Category={Cardtype==="Category"} />
+                    <BottomSection Category={Cardtype==="Category"}>
+                        <Name><Dot Category={Cardtype==="Category"}></Dot>{item.name}</Name>
+                        <Edit Category={Cardtype==="Category"} >
+                            <Anchor href="" Category={Cardtype==="Category"}><HiOutlinePencil  /></Anchor>
                         </Edit>
                     </BottomSection>
                 </Card>

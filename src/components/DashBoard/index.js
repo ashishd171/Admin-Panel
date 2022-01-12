@@ -1,7 +1,7 @@
 import React from 'react';
 import CatagoryItemEdit from '../CatagoryItemEdit';
 import EmptyState from '../EmptyState';
-import HomepageHeader from '../HomepageHeader';
+import Header from '../Header';
 import ProductGrid from '../ProductGrid';
 import ProductList from '../ProductList';
 import ListViewSkeleton from '../ListViewSkeleton/index';
@@ -14,7 +14,7 @@ import {Wrapper} from './style'
 const DashBoard = ({children, showInput,listgridbtn,productDesign,handleProduct}) => {
     return (
         <Wrapper>   
-            <HomepageHeader showInput={showInput}  listgridbtn={listgridbtn} productDesign={productDesign} handleProduct={handleProduct}/>
+            <Header showInput={showInput}  listgridbtn={listgridbtn} productDesign={productDesign} handleProduct={handleProduct}/>
             {children}
             {/* <TodayIncomeCard /> */}
             {/* <SearchInput /> */}

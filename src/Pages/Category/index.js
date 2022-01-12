@@ -6,8 +6,17 @@ import SideBar from '../../components/Sidebar';
 import TopBar from '../../components/TopBar';
 import {FlexContainer,Wrapper} from './style';
 
-const Category = () => {
+const Category = (CardStructure,Cardtype) => {
     const [product , setProduct] = useState(true)
+    
+    const CatagoryCard= [
+        {Image: "./images/Pizzaimage.png", name: "Піца"},
+        {Image: "./images/Pizzaimage.png", name: "Піца"},
+        {Image: "./images/Pizzaimage.png", name: "Піца"},
+        {Image: "./images/Pizzaimage.png", name: "Піца"},
+        {Image: "./images/Pizzaimage.png", name: "Піца"},
+        {Image: "./images/Pizzaimage.png", name: "Піца"},
+    ]
 
     return (
         <Wrapper>
@@ -16,7 +25,7 @@ const Category = () => {
                 <SideBar />
                 <DashBoard showInput={true} listgridbtn={true} productDesign={product} handleProduct={(valuechnage)=>setProduct(valuechnage)}>
                     {
-                        product ? <ProductGrid /> : <ProductList />
+                        product ? <ProductGrid CardStructure={CatagoryCard} Cardtype={"Category"}/> : <ProductList />
                     }
                     
                 </DashBoard>
