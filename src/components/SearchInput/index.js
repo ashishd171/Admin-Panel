@@ -2,6 +2,7 @@ import React from 'react';
 import {Wrapper,Input,Search,Button} from './style'
 
 const SearchInput = ({showInput}) => {
+    
     return (
         <>
         { showInput  ?

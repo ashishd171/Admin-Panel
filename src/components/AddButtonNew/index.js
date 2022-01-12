@@ -21,7 +21,8 @@ interface Props {
     marginTop: String;
     marginBottom: String;
     alignSelf: String;
-    display: String
+    display: String;
+    marginRight: String;
 }
 const Button:React.FC<Props> = ({
     border,
@@ -42,7 +43,8 @@ const Button:React.FC<Props> = ({
     marginBottom,
     alignSelf,
     float,
-    display
+    display,
+    marginRight
 }) => {
     return (
         <A.Button
@@ -65,7 +67,8 @@ const Button:React.FC<Props> = ({
                 marginBottom,
                 alignSelf,
                 float,
-                display
+                display,
+                marginRight
             }}
         >
             {children}

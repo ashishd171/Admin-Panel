@@ -5,8 +5,12 @@ import ProductList from '../../components/ProductList';
 import SideBar from '../../components/Sidebar';
 import TopBar from '../../components/TopBar';
 import {FlexContainer,Wrapper} from './style';
+<<<<<<< HEAD
 
 const Category = (CardStructure,Cardtype) => {
+=======
+const Category = () => {
+>>>>>>> 46ba41a8628cc4b3518509adb63ef43ae9a1f94f
     const [product , setProduct] = useState(true)
     
     const CatagoryCard= [
