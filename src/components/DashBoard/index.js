@@ -23,13 +23,8 @@ import Reviews from '../Reviews/index';
 
 const DashBoard = ({ children, showInput, listgridbtn, productDesign, handleProduct }) => {
     return (
-<<<<<<< HEAD
         <Wrapper>   
             <Header showInput={showInput}  listgridbtn={listgridbtn} productDesign={productDesign} handleProduct={handleProduct}/>
-=======
-        <Wrapper>
-            <HomepageHeader showInput={showInput} listgridbtn={listgridbtn} productDesign={productDesign} handleProduct={handleProduct} />
->>>>>>> 46ba41a8628cc4b3518509adb63ef43ae9a1f94f
             {children}
             {/* <TodayIncomeCard /> */}
             {/* <SearchInput /> */}
