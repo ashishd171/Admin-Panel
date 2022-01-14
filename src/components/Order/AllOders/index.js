@@ -1,5 +1,5 @@
 import React from 'react';
-import HomepageHeader from '../../HomepageHeader';
+import Header from '../../Header';
 import SearchInput from '../SearchInput';
 import { Wrapper, SearchBox } from '../../DashBoard/style';
 import Calender from '../calender';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import HomepageHeader from '../../HomepageHeader';
+import Header from '../../Header';
 import D from './style';
 import E from './UploadImgStyle';
 import FancyModalButton from '../Modal/index';
@@ -21,7 +21,7 @@ const UploadImg = () => {
 
     return (
         <D.Wrapper>
-            {/* <HomepageHeader /> */}
+            {/* <Header /> */}
             <ModalProvider backgroundComponent={M.FadingBackground}>
                 <FancyModalButton />
             </ModalProvider>

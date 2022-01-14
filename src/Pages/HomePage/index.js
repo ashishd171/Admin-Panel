@@ -1,5 +1,4 @@
 import React from 'react';
-import CatagoryItemEdit from '../../components/CatagoryItemEdit';
 import DashBoard from '../../components/DashBoard';
 import SideBar from '../../components/Sidebar';
 import TodayIncomeCard from '../../components/TodayIncomeCard';

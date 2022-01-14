@@ -1,11 +1,13 @@
 import React,{useState} from 'react';
+import CategoryItemEdit from '../../components/category/CategoryItemEdit';
+import categoryItemEdit from '../../components/category/CategoryItemEdit';
+import OpenDropDown from '../../components/categoryForm';
 import DashBoard from '../../components/DashBoard';
 import ProductGrid from '../../components/ProductGrid';
 import ProductList from '../../components/ProductList';
 import SideBar from '../../components/Sidebar';
 import TopBar from '../../components/TopBar';
 import {FlexContainer,Wrapper} from './style';
-
 
 const Category = () => {
     const [product , setProduct] = useState(true)
@@ -28,7 +30,6 @@ const Category = () => {
                     {
                         product ? <ProductGrid CardStructure={CatagoryCard} Cardtype={"Category"}/> : <ProductList />
                     }
-                    
                 </DashBoard>
             </FlexContainer>
         </Wrapper>

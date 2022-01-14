@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../../AddButtonNew';
-import HomepageHeader from '../../HomepageHeader';
+import Header from '../../Header';
 import D from '../../Product/NewProductAdd/style';
 import E from '../../Product/NewProductAdd/UploadImgStyle';
 import A from './style';
@@ -20,7 +20,7 @@ const PushNotificationCreateNew = () => {
 
     return (
         <D.Wrapper>
-            {/* <HomepageHeader /> */}
+            {/* <Header /> */}
             <D.container>
                 <D.InputBox>
                     <D.Label>Населений пункт:</D.Label>

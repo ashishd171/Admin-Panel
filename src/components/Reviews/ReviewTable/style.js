@@ -3,10 +3,12 @@ import styled from "styled-components";
 export const MainBox = styled.div`
     display:flex;
     width:100%;
+    
 `;
 
 export const TableBox = styled.div`
     width:100%;
+    background-color: #fff;
 `;
 
 export const TH1 = styled.td`
@@ -16,6 +18,7 @@ export const TH1 = styled.td`
     line-height: 24px;
     color: #1C1C1C;
     width: 76px;
+    background-color:  #FAFAFA;
 `;
 
 export const TH2 = styled.td`
@@ -25,6 +28,7 @@ export const TH2 = styled.td`
     line-height: 24px;
     color: #1C1C1C;
     width: 113px;
+    background-color:  #FAFAFA;
 `;
 
 export const TH3 = styled.td`
@@ -34,6 +38,7 @@ export const TH3 = styled.td`
     line-height: 24px;
     color: #1C1C1C;
     width: 227px;
+    background-color:  #FAFAFA;
 `;
 
 export const TH4 = styled.td`
@@ -43,6 +48,7 @@ export const TH4 = styled.td`
     line-height: 24px;
     color: #1C1C1C;
     width: 190px;
+    background-color:  #FAFAFA;
 `;
 
 export const TH5 = styled.td`
@@ -52,6 +58,7 @@ export const TH5 = styled.td`
     line-height: 24px;
     color: #1C1C1C;
     width: 451px;
+    background-color:  #FAFAFA;
 `;
 
 export const TH6 = styled.td`
@@ -61,6 +68,7 @@ export const TH6 = styled.td`
     line-height: 24px;
     color: #1C1C1C;
     width: 127px;
+    background-color:  #FAFAFA;
 `;
 
 export const RattingIcon = styled.img`
@@ -83,6 +91,7 @@ const Body = styled.tbody`
 
 const TR = styled.tr`
   // custom css goes here
+  border-bottom: 1px solid #dddddd69;
 `;
 
 const TD = styled.td`

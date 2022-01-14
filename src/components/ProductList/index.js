@@ -11,18 +11,18 @@ const ProductList = () => {
                 <ProdTable>
                     <TableRow>
                         <TableHeadingFirst></TableHeadingFirst>
-                        <TableHeadingPhoto>Фото</TableHeadingPhoto>
-                        <TableHeadingStatus>Статус</TableHeadingStatus>
-                        <TableHeadingNizwa>Назва</TableHeadingNizwa>
-                        <TableHeadingEdit>Дія</TableHeadingEdit>
+                        <TableHeadingPhoto>Фoтo</TableHeadingPhoto>
+                        <TableHeadingStatus>Cтaтyc</TableHeadingStatus>
+                        <TableHeadingNizwa>Haзвa</TableHeadingNizwa>
+                        <TableHeadingEdit>Дiя</TableHeadingEdit>
                     </TableRow>
                     {Tabl.map((items, index) => {
                         return (
                             <TableRow>
                                 <TableData><Image src="./images/text.svg" /></TableData>
                                 <TableData><Anchor href="#"><Image src="./images/userphoto.svg" /></Anchor></TableData>
-                                <TableData><Span></Span>Активный</TableData>
-                                <TableData>Піца</TableData>
+                                <TableData><Span></Span>Aктивный</TableData>
+                                <TableData>Пiцa</TableData>
                                 <TableData><Anchor href="#"><HiOutlinePencil /></Anchor></TableData>
                             </TableRow>
                         )

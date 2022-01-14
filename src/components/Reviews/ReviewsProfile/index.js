@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import HomepageHeader from '../../HomepageHeader';
+import Header from '../../Header';
 import D from '../../Product/NewProductAdd/style'
 import B from './style';
 import FancyModalButton from '../../Product/Modal/index';
 import { ModalProvider } from "styled-react-modal";
 import E from '../../Product/NewProductAdd/UploadImgStyle';
 import M from '../../Product/Modal/style';
-import { RattingIcon } from '../Reviews/style';
+import { RattingIcon } from '../ReviewTable/style';
 
 
 
@@ -21,7 +21,7 @@ const ReviewProfile = () => {
 
     return (
         <D.Wrapper>
-            {/* <HomepageHeader /> */}
+            {/* <Header /> */}
             <ModalProvider backgroundComponent={M.FadingBackground}>
                 <FancyModalButton />
             </ModalProvider>

@@ -24,6 +24,8 @@ export const Wrapper = styled.div`
     }
     svg{
         margin-right: 10px;
+        width: 16px;
+        height: 16px;   
     }
     .arrowdown{
         float: right;
@@ -84,6 +86,8 @@ export const UnorderList = styled.ul`
     padding-left: 0;
 `
 export const List = styled.li`
+display: flex;
+align: items: center;
     list-style-type: none;
     font-family: Roboto;
     font-style: normal;
@@ -102,6 +106,7 @@ export const List = styled.li`
     }
     svg{
         margin-right: 10px;
+        align-self: center;
     }
     .arrowdown{
         float: right;
@@ -111,7 +116,8 @@ export const List = styled.li`
     }
    
 `
-export const Anchor = styled.a`
+export const Anchor = styled.div`
+cursor: pointer;
     text-decoration: none;
     color: #1C1C1C;   
     :hover{

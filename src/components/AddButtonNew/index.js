@@ -2,29 +2,7 @@ import React from "react";
 import { CgEnter } from "react-icons/cg";
 import A from './Style';
 
-
-interface Props {
-    border: string;
-    color: string;
-    children?: React.ReactNode;
-    height: string;
-    onClick: () => void;
-    radius: string;
-    padding: string;
-    width: string;
-    backgroundColor: String;
-    borderRadius: String;
-    fontSize: String;
-    textTransform: String;
-    fontWeight: String;
-    margin: String;
-    marginTop: String;
-    marginBottom: String;
-    alignSelf: String;
-    display: String;
-    marginRight: String;
-}
-const Button:React.FC<Props> = ({
+const Button = ({
     border,
     color,
     children,

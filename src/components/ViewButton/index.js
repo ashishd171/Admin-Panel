@@ -3,7 +3,6 @@ import { ListBtn, GridBtn, Wrapper } from './style'
 import { RiLayoutGridFill } from "react-icons/ri";
 import { AiOutlineUnorderedList } from "react-icons/ai";
 
-
 const ViewButton = ({ listgridbtn, handleProduct, product }) => {
     const [activebtn, setActivebtn] = useState(true);
 

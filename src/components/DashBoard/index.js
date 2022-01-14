@@ -1,5 +1,4 @@
 import React from 'react';
-import CatagoryItemEdit from '../CatagoryItemEdit';
 import EmptyState from '../EmptyState';
 import Header from '../Header';
 import ProductGrid from '../ProductGrid';
@@ -32,7 +31,6 @@ const DashBoard = ({ children, showInput, listgridbtn, productDesign, handleProd
             {/* <ProductGrid /> */}
             {/* <ProductList /> */}
             {/* <EmptyState /> */}
-            {/* <CatagoryItemEdit /> */}
             {/* <TileViewSkeleton /> */}
             {/* <ListViewSkeleton /> */}
             

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import HomepageHeader from '../../HomepageHeader';
+import Header from '../../Header';
 import D from '../../Product/NewProductAdd/style';
 import B from './style';
 import FancyModalButton from '../../Product/Modal';
@@ -20,7 +20,7 @@ const PushNotificationDetails = () => {
 
     return (
         <D.Wrapper>
-            {/* <HomepageHeader /> */}
+            {/* <Header /> */}
             <ModalProvider backgroundComponent={M.FadingBackground}>
                         <FancyModalButton />
                     </ModalProvider>

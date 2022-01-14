@@ -1,6 +1,6 @@
 import React from 'react';
-import HomepageHeader from '../HomepageHeader';
-import S from '../HomepageHeader/style';
+import Header from '../Header';
+import S from '../Header/style';
 import D from '../Product/NewProductAdd/style';
 import E from '../Product/NewProductAdd/UploadImgStyle';
 import F from './style'
@@ -17,7 +17,7 @@ const UserProfileHeader = () => {
 
     return (
         <D.Wrapper>
-        {/* <HomepageHeader /> */}
+        {/* <Header /> */}
             <D.container>
                 <D.uploadImgBox>
                     <E.AddIconBox>

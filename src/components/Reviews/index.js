@@ -1,23 +1,23 @@
 import React from 'react';
-import HomepageHeader from '../HomepageHeader';
+import Header from '../Header';
 import SearchInput from '../Order/SearchInput';
 import { Wrapper, SearchBox } from '../DashBoard/style';
 import Calender from '../Order/calender';
-import ReviewTable from './Reviews';
+import ReviewTable from './ReviewTable';
 import ReviewProfile from './ReviewsProfile';
 
-const Reviews = () => {
+const ReviewsComp = () => {
     return (
         <Wrapper>
-            {/* <HomepageHeader /> */}
-            <SearchBox>
+            {/* <Header /> */}
+            {/* <SearchBox>
                 <SearchInput />
                 <Calender />
-            </SearchBox>
+            </SearchBox> */}
             <ReviewTable />
             {/* <ReviewProfile /> */}
         </Wrapper>
     );
 }
 
-export default Reviews;
+export default ReviewsComp;

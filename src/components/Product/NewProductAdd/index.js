@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../../AddButtonNew';
-import HomepageHeader from '../../HomepageHeader';
+import Header from '../../Header';
 import D from './style'
 
 const NewProductAdd = () => {
@@ -12,7 +12,7 @@ const NewProductAdd = () => {
 
     return (
         <D.Wrapper>
-            {/* <HomepageHeader /> */}
+            {/* <Header /> */}
             <D.container>
                 <D.uploadImgBox>
                     <D.AddBox>

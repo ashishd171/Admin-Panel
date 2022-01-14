@@ -3,27 +3,8 @@ import { CgEnter } from "react-icons/cg";
 import A from './style'
 import { RiDeleteBin5Line } from "react-icons/ri";
 
-interface Props {
-    border: string;
-    color: string;
-    children?: React.ReactNode;
-    height: string;
-    onClick: () => void;
-    radius: string;
-    padding: string;
-    width: string;
-    backgroundColor: String;
-    borderRadius: String;
-    fontSize: String;
-    textTransform: String;
-    fontWeight: String;
-    margin: String;
-    marginTop: String;
-    marginBottom: String;
-    alignSelf: String;
-    display: String
-}
-const Button:React.FC<Props> = ({
+
+const Button = ({
     border,
     color,
     children,

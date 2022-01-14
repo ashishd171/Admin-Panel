@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import Button from '../AddButtonNew';
-import HomepageHeader from '../HomepageHeader';
+import Header from '../Header';
 import E from '../Product/NewProductAdd/UploadImgStyle';
 import D from '../Product/NewProductAdd/style';
 import FancyModalButton from '../Product/Modal';

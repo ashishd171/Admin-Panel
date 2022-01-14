@@ -1,14 +1,14 @@
 
 import React, { useState } from 'react';
-import Button from '../AddButtonNew';
-import HomepageHeader from '../HomepageHeader';
-import E from '../NewProductAdd/UploadImgStyle';
-import D from '../NewProductAdd/style';
-import FancyModalButton from '../Modal/index';
+import E from '../../Product/NewProductAdd/UploadImgStyle';
+import D from '../../Product/NewProductAdd/style';
+import FancyModalButton from '../../Product/Modal';
 import { ModalProvider } from "styled-react-modal";
-import M from '../Modal/style';
+import M from '../../Product/Modal/style';
+import Header from '../../Header';
+import Button from '../../AddButtonNew';
 
-const categoryItemEdit = () => {
+const CategoryItemEdit = () => {
 
     const [isOpen, setIsOpen] = useState(false);
     const toggling = () => setIsOpen(!isOpen);
@@ -17,7 +17,7 @@ const categoryItemEdit = () => {
 
     return (
         <D.Wrapper>
-            <HomepageHeader />
+            <Header />
             <ModalProvider backgroundComponent={M.FadingBackground}>
                 <FancyModalButton />
             </ModalProvider>
@@ -26,7 +26,7 @@ const categoryItemEdit = () => {
                     <D.AddBox>
                         {/* <D.AddIconBox> */}
                             {/* <D.AddText><D.AddIcon>+</D.AddIcon> Завантажити</D.AddText> */}
-                            <E.UploadText src="./images/2022.png" ></E.UploadText>
+                            <E.UploadText src="./images/Lunch-image.png" ></E.UploadText>
                         {/* </D.AddIconBox> */}
                         {/* <D.UploadText type='file' ></D.UploadText> */}
                     </D.AddBox>
@@ -53,10 +53,12 @@ const categoryItemEdit = () => {
                             </D.DropDownListContainer>
                         )}
                     </D.DropDownContainer>
+                    
                 </D.InputBox>
+                <Button children={"Зберегти"} marginTop="32" width="156px" />
             </D.container>
         </D.Wrapper>
     );
 }
 
-export default categoryItemEdit;
+export default CategoryItemEdit;
