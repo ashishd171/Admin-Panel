@@ -5,6 +5,8 @@ import SideBar from '../../../components/Sidebar';
 import TopBar from '../../../components/TopBar';
 import {Wrapper,FlexContainer} from './style'
 import TileViewSkeleton from '../../../components/TileViewSkeleton';
+import SettingLocationDetail from '../../../components/SettingLocationDetail';
+import SettingDelivery from '../../../components/SettingDelivery';
 
 const Delivery = () => {
     return (
@@ -14,8 +16,7 @@ const Delivery = () => {
                 <FlexContainer>
                     <SideBar />
                     <DashBoard showInput={false} listgridbtn={false}>
-                        <p>Delivery</p>
-                        <TileViewSkeleton />
+                        <SettingDelivery />
                     </DashBoard>
                 </FlexContainer>
             </Wrapper>

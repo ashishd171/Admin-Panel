@@ -1,12 +1,11 @@
 import React from 'react';
-import { TableData } from '../ProductList/style';
+// import { TableData } from '../ProductList/style';
 import {Wrapper} from './style'
 
 const SettingRequisites = () => {
     return (
         <div>
             SettingRequisites
-            <TableData />
         </div>
     );
 }

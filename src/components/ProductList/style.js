@@ -9,9 +9,11 @@ export const ProdTable = styled.table`
     table-layout: fixed;
 `
 export const TableRow = styled.tr`
-border-bottom: 1px solid #dddddd69;
-
+    border-bottom: 1px solid #dddddd69;
 `
+export const TableBody = styled.tbody``
+
+
 export const TableHeading = styled.th`
     padding: 17px;
     font-family: Roboto;
@@ -87,7 +89,45 @@ export const TableHeadingEdit = styled.th`
     box-shadow: -18px 0px 0px -17px rgba(0, 0, 0, 0.06);
     border-radius: 0px;
 `
-
+export const TableDatafirst = styled.td`
+    display: flex;
+    justify-content: center;
+    padding: 0px 16px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    svg{
+        color: #1890FF;
+        width: 24px;
+        height: 24px;
+    }
+    .LastOne{
+        width: 50%;
+        text-align: right;
+    }
+`
+export const TableDataSecond = styled.td`
+    text-align: center;
+    padding: 0px 16px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    svg{
+        color: #1890FF;
+        width: 24px;
+        height: 24px;
+    }
+    .LastOne{
+        width: 50%;
+        text-align: right;
+    }
+`
 export const TableData = styled.td`
     padding: 0px 16px;
     font-family: Roboto;

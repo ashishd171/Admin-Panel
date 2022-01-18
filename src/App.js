@@ -11,17 +11,25 @@ import Hall from './Pages/Settings/Hall';
 import User from './Pages/User';
 import PushNotification from './Pages/PushNotification';
 import Reviews from './Pages/Reviews';
-import SpecialOffers from './Pages/Settings/SpecialOffers';
 import Delivery from './Pages/Settings/Delivery';
 import Requisities from './Pages/Settings/Requisities';
 import Partners from './Pages/Settings/Partners';
 import Staff from './Pages/Settings/Staff';
+import CategoryItemEdit from './components/category/CategoryItemEdit';
+import SpecialOfferEdit from './components/SpecialOfferList/SpecialOfferEdit';
+import SpecialOffers from './Pages/Settings/SpecialOffers';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
+          <Route  path="/specialoffer/item/edit/">
+            <SpecialOfferEdit/>
+          </Route>
+          <Route  path="/category/item/edit/">
+            <CategoryItemEdit/>
+          </Route>
           <Route  path="/staff">
             <Staff />
           </Route>

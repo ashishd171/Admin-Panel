@@ -1,5 +1,5 @@
 import React from 'react';
-import {Wrapper,Heading, Currency,Unit,Div,TableHeadingFourth,TableWrap, TableRow, TableHeadingThird,Anchor, TableHeadingFirst, TableHeadingSecond, TableData}  from './style'
+import {Wrapper,Heading,TableBody, Currency,Unit,Div,TableHeadingFourth,TableWrap, TableRow, TableHeadingThird,Anchor, TableHeadingFirst, TableHeadingSecond, TableData}  from './style'
 import { IoLocationOutline } from "react-icons/io";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import Button from '../AddButtonNew';
@@ -10,8 +10,8 @@ const SettingDelivery = () => {
         <Wrapper>
             <Heading>Безкоштовна доставка від</Heading>
             <Div><Currency>200</Currency><Unit>грн</Unit></Div>
-            {/* <LocalityText>Населений пункт</LocalityText> */}
             <TableWrap>
+                <TableBody>
                 <TableRow>
                     <TableHeadingFirst>Населений пункт</TableHeadingFirst>
                     <TableHeadingSecond>Ціна</TableHeadingSecond>
@@ -21,7 +21,7 @@ const SettingDelivery = () => {
                 </TableRow>
                 {Arrayname.map((item, index) => {
                     return (
-                        <TableRow>
+                        <TableRow key={index}>
                             <TableData><InputBox placeholder={"Лозівок"} className="inputBox" /></TableData>
                             <TableData><Div><Currency>40</Currency><Unit>грн</Unit></Div></TableData>
                             <TableData><Div><Currency>00</Currency><Unit>год</Unit></Div></TableData>
@@ -30,6 +30,7 @@ const SettingDelivery = () => {
                         </TableRow>
                     )
                 })}
+                </TableBody>
             </TableWrap>
             <Button children={"Зберегти"} float={"right"} width={156} />
         </Wrapper>

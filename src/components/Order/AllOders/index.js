@@ -4,7 +4,7 @@ import SearchInput from '../SearchInput';
 import { Wrapper, SearchBox } from '../../DashBoard/style';
 import Calender from '../calender';
 import AllOrderTable from '../Table';
-import OrderDetails from '../orderDetails';
+import OrderDetails from '../OrderDetails';
 
 const OrderAll = () => {
     return (

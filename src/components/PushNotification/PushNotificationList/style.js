@@ -71,7 +71,7 @@ export const TH6 = styled.td`
     background-color:  #FAFAFA;
 `;
 
-export const RattingIcon = styled.img`
+export const ImageIcon = styled.img`
     margin-right: 5px;
 `;
 

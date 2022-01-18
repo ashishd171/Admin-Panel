@@ -3,12 +3,12 @@ import {Edit,Dot,Wrapper,Name,Card,BottomSection,Image,Anchor} from './style'
 import { HiOutlinePencil } from "react-icons/hi";
 
 const ProductGrid = ({CardStructure, Cardtype}) => {
-     console.log(CardStructure,Cardtype==="Category")
+    //  console.log(CardStructure,Cardtype==="Category")
     return (
         <Wrapper>
             {CardStructure?.map((item, index)=>{
                 return(
-                    <Card Category={Cardtype==="Category"}>
+                    <Card key={index} Category={Cardtype==="Category"}>
                     <Image  src={item.Image} Category={Cardtype==="Category"} />
                     <BottomSection Category={Cardtype==="Category"}>
                         <Name><Dot Category={Cardtype==="Category"}></Dot>{item.name}</Name>

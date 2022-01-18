@@ -4,7 +4,7 @@ import { Container, ProfileNameBox, ProfileTextHead, TextBox, ProfileText, Profi
 
 const OrderProfile = () => {
 
-    const Delivery = [
+    const Deliverys = [
         { Delivery: "Спосіб доставки", DeliveryName: "Доставка курьером" },
         { Delivery: "Адреса доставки", DeliveryName: "вул. Партизанська,8 с. Свидівок" },
         { Delivery: "Час", DeliveryName: "Як найшвидше" },
@@ -31,7 +31,7 @@ const OrderProfile = () => {
                 </ProfileNameBox>
                 <ProfileNameBox>
                     <TextBoxMain>
-                        {Delivery.map((details, index) => {
+                        {Deliverys.map((details, index) => {
                             return (
                                 <TextBox>
                                     <ProfileTextHead>{details.Delivery}</ProfileTextHead>

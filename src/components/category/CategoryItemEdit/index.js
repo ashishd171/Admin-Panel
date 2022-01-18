@@ -9,7 +9,7 @@ import Header from '../../Header';
 import Button from '../../AddButtonNew';
 
 const CategoryItemEdit = () => {
-
+ 
     const [isOpen, setIsOpen] = useState(false);
     const toggling = () => setIsOpen(!isOpen);
 
@@ -17,7 +17,7 @@ const CategoryItemEdit = () => {
 
     return (
         <D.Wrapper>
-            <Header />
+            {/* <Header /> */}
             <ModalProvider backgroundComponent={M.FadingBackground}>
                 <FancyModalButton />
             </ModalProvider>
@@ -26,7 +26,7 @@ const CategoryItemEdit = () => {
                     <D.AddBox>
                         {/* <D.AddIconBox> */}
                             {/* <D.AddText><D.AddIcon>+</D.AddIcon> Завантажити</D.AddText> */}
-                            <E.UploadText src="./images/Lunch-image.png" ></E.UploadText>
+                            <E.UploadText src="/images/Lunch-image.png" ></E.UploadText>
                         {/* </D.AddIconBox> */}
                         {/* <D.UploadText type='file' ></D.UploadText> */}
                     </D.AddBox>
@@ -40,7 +40,7 @@ const CategoryItemEdit = () => {
                 <D.InputBox>
                     <D.Label>Статус</D.Label>
                     <D.DropDownContainer>
-                        <D.DropDownHeader onClick={toggling}><D.IconSpan></D.IconSpan>Активный<D.Icon src='arrow-down.png'></D.Icon></D.DropDownHeader>
+                        <D.DropDownHeader onClick={toggling}><D.IconSpan></D.IconSpan>Активный<D.Icon src='/images/arrow-down.png'></D.Icon></D.DropDownHeader>
                         {isOpen && (
                             <D.DropDownListContainer>
                                 <D.DropDownList>

@@ -5,6 +5,7 @@ import SideBar from '../../components/Sidebar';
 import { Wrapper,FlexContainer } from './style';
 import TopBar from '../../components/TopBar';
 import ListViewSkeleton from '../../components/ListViewSkeleton';
+import PushNotificationList from '../../components/PushNotification/PushNotificationList';
 
 const PushNotification = () => {
     return (
@@ -14,7 +15,7 @@ const PushNotification = () => {
             <FlexContainer>
                 <SideBar />
                 <DashBoard showInput={false} listgridbtn={false}>
-                    <ListViewSkeleton />
+                    <PushNotificationList />
                 </DashBoard>
             </FlexContainer>
         </Wrapper>

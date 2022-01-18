@@ -1,6 +1,6 @@
 import React from 'react';
 import DashBoard from '../../../components/DashBoard';
-import SettingLocationTable from '../../../components/SettingLocationTable';
+import SpecialOfferList from '../../../components/SpecialOfferList';
 import SideBar from '../../../components/Sidebar';
 import TopBar from '../../../components/TopBar';
 import {Wrapper,FlexContainer} from './style'
@@ -14,8 +14,7 @@ const SpecialOffers = () => {
                 <FlexContainer>
                     <SideBar />
                     <DashBoard showInput={false} listgridbtn={false}>
-                        <p>SpecialOffers</p>
-                        <TileViewSkeleton />
+                        <SpecialOfferList />
                     </DashBoard>
                 </FlexContainer>
             </Wrapper>

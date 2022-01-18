@@ -18,10 +18,10 @@ const Locations = () => {
                         <SideBar />
                         <DashBoard showInput={false} listgridbtn={false}>
                             <SettingLocationTable />
-                            <SettingLocationDetail />
-                            <SettingDelivery />
-                            <SettingEmptyState />
-                            <SettingRequisites />
+                            {/* <SettingLocationDetail /> */}
+                            {/* <SettingDelivery /> */}
+                            {/* <SettingEmptyState /> */}
+                            {/* <SettingRequisites /> */}
                         </DashBoard>
                     </FlexContainer>
                 </Wrapper>

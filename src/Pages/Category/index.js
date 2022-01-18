@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import CategoryItemEdit from '../../components/category/CategoryItemEdit';
-import categoryItemEdit from '../../components/category/CategoryItemEdit';
 import OpenDropDown from '../../components/categoryForm';
 import DashBoard from '../../components/DashBoard';
 import ProductGrid from '../../components/ProductGrid';
@@ -20,7 +19,14 @@ const Category = () => {
         {Image: "./images/Pizzaimage.png", name: "Піца"},
         {Image: "./images/Pizzaimage.png", name: "Піца"},
     ]
-
+    const [isModal,setIsModal]=useState(false);
+    const handleModal=()=>{
+        setIsModal(!isModal)
+    }
+    console.log(isModal)
+    // if(isModal){
+    //     return <CategoryItemEdit />
+    // }
     return (
         <Wrapper>
             <TopBar />
@@ -28,8 +34,9 @@ const Category = () => {
                 <SideBar />
                 <DashBoard showInput={true} listgridbtn={true} productDesign={product} handleProduct={(valuechnage)=>setProduct(valuechnage)}>
                     {
-                        product ? <ProductGrid CardStructure={CatagoryCard} Cardtype={"Category"}/> : <ProductList />
+                        product && !isModal ? <ProductGrid CardStructure={CatagoryCard} Cardtype={"Category"}/> : <ProductList isModal={isModal} toggle={handleModal}/>
                     }
+                    {/* {isModal ? <CategoryItemEdit />:null} */}
                 </DashBoard>
             </FlexContainer>
         </Wrapper>

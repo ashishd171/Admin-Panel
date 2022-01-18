@@ -27,7 +27,7 @@ export const TH2 = styled.td`
     font-size: 14px;
     line-height: 24px;
     color: #1C1C1C;
-    width: 113px;
+    width: 250px;
     background-color:  #FAFAFA;
 `;
 
@@ -37,7 +37,7 @@ export const TH3 = styled.td`
     font-size: 14px;
     line-height: 24px;
     color: #1C1C1C;
-    width: 227px;
+    width: 123px;
     background-color:  #FAFAFA;
 `;
 
@@ -47,7 +47,7 @@ export const TH4 = styled.td`
     font-size: 14px;
     line-height: 24px;
     color: #1C1C1C;
-    width: 190px;
+    width: 123px;
     background-color:  #FAFAFA;
 `;
 
@@ -57,7 +57,7 @@ export const TH5 = styled.td`
     font-size: 14px;
     line-height: 24px;
     color: #1C1C1C;
-    width: 486px;
+    width: 123px;
     background-color:  #FAFAFA;
 `;
 
@@ -70,8 +70,17 @@ export const TH6 = styled.td`
     width: 123px;
     background-color:  #FAFAFA;
 `;
+export const TH7 = styled.td`
+    padding:17px 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #1C1C1C;
+    width: 123px;
+    background-color:  #FAFAFA;
+`;
 
-export const RattingIcon = styled.img`
+export const ImageIcon = styled.img`
     margin-right: 5px;
 `;
 
@@ -100,6 +109,13 @@ const TD = styled.td`
     font-size: 14px;
     line-height: 22px;
     color: #1C1C1C;
+    svg{
+        color: #1890FF;
+        width: 24px;
+        height: 24px;
+        float: left;
+
+    }
 `;
 
 export default {

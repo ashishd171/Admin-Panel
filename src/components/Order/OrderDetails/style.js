@@ -3,10 +3,14 @@ import styled from "styled-components";
 export const MainBox = styled.div`
     display:flex;
     width:100%;
+
 `;
 
 export const TableBox = styled.div`
     width:100%;
+    background: #fff;
+    padding: 24px;
+    margin: 24px;
 `;
 export const Status = styled.p`
     font-weight: 500;

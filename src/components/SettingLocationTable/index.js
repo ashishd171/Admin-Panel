@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrapper, TableWrap, TableRow, TableHeadingThird,Anchor, TableHeadingFirst, TableHeadingSecond, TableData } from './style';
+import { Wrapper, TableWrap, TableBody,TableRow, TableHeadingThird,Anchor, TableHeadingFirst, TableHeadingSecond, TableData } from './style';
 import { HiOutlinePencil } from "react-icons/hi";
 
 const SettingLocationTable = () => {
@@ -10,6 +10,7 @@ const SettingLocationTable = () => {
         <div>
             <Wrapper>
                 <TableWrap>
+                    <TableBody>
                     <TableRow>
                         <TableHeadingFirst>№</TableHeadingFirst>
                         <TableHeadingSecond>Населений пункт</TableHeadingSecond>
@@ -17,13 +18,14 @@ const SettingLocationTable = () => {
                     </TableRow>
                     {Arrayname.map((item, index) => {
                         return (
-                            <TableRow>
+                            <TableRow key={index}>
                                 <TableData>1</TableData>
                                 <TableData>Свидівок</TableData>
                                 <TableData className="icon"><Anchor href="#"><HiOutlinePencil /></Anchor></TableData>
                             </TableRow>
                         )
                     })}
+                    </TableBody>
                 </TableWrap>
             </Wrapper>
 

@@ -5,6 +5,7 @@ import SideBar from '../../../components/Sidebar';
 import TopBar from '../../../components/TopBar';
 import {Wrapper,FlexContainer} from './style'
 import TileViewSkeleton from '../../../components/TileViewSkeleton';
+import StaffDetailList from './StaffDetailList';
 
 const Staff = () => {
     return (
@@ -14,8 +15,7 @@ const Staff = () => {
                 <FlexContainer>
                     <SideBar />
                     <DashBoard showInput={false} listgridbtn={false}>
-                        <p>Staff</p>
-                        <TileViewSkeleton />
+                        <StaffDetailList />
                     </DashBoard>
                 </FlexContainer>
             </Wrapper>

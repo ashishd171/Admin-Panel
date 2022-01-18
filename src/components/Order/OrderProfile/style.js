@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
     max-width:332px;
     width:100%;
-    padding:24px;
+    padding: 24px;
+    margin: 24px 24px 24px 0px;
+    background: #fff;
 `;
 
 export const ProfileNameBox = styled.div`

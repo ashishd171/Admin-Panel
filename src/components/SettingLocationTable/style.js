@@ -12,6 +12,7 @@ export const TableWrap = styled.table`
     width: 100%;
     table-layout: fixed;
 `
+export const TableBody = styled.tbody``
 export const TableRow = styled.tr`
 `
 export const TableHeadingFirst = styled.th`

@@ -86,8 +86,8 @@ export const UnorderList = styled.ul`
     padding-left: 0;
 `
 export const List = styled.li`
-display: flex;
-align: items: center;
+    display: flex;
+    align: items: center;
     list-style-type: none;
     font-family: Roboto;
     font-style: normal;
@@ -117,7 +117,7 @@ align: items: center;
    
 `
 export const Anchor = styled.div`
-cursor: pointer;
+    cursor: pointer;
     text-decoration: none;
     color: #1C1C1C;   
     :hover{

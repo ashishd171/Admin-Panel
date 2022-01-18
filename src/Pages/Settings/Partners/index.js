@@ -5,6 +5,7 @@ import SideBar from '../../../components/Sidebar';
 import TopBar from '../../../components/TopBar';
 import {Wrapper,FlexContainer} from './style'
 import TileViewSkeleton from '../../../components/TileViewSkeleton';
+import PartnersList from './PartnersList';
 
 const Partners = () => {
     return (
@@ -14,8 +15,7 @@ const Partners = () => {
                 <FlexContainer>
                     <SideBar />
                     <DashBoard showInput={false} listgridbtn={false}>
-                        <p>Partners</p>
-                        <TileViewSkeleton />
+                        <PartnersList />
                     </DashBoard>
                 </FlexContainer>
             </Wrapper>
