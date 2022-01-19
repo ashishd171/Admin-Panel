@@ -55,7 +55,7 @@ const CategoryItemEdit = () => {
                     </D.DropDownContainer>
                     
                 </D.InputBox>
-                <Button children={"Зберегти"} marginTop="32" width="156px" />
+                <Button showButton={true} children={"Зберегти"} marginTop="32" width="156px" />
             </D.container>
         </D.Wrapper>
     );

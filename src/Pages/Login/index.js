@@ -5,7 +5,7 @@ import  InputBox from '../../components/InputBox/index';
 import AddButtonNew from '../../components/AddButtonNew';
 import {Wrapper,FormWrap, MainSection,Image,Form,Title,Alert} from './style'
 
-const LogIn = () => {
+const LogIn = ({showButton}) => {
     return (
         <Wrapper>
             <Container>
@@ -18,7 +18,7 @@ const LogIn = () => {
                         <InputBox  label={"Пароль"} placeholder={"ВВведіть пароль"}/>
                         <Alert>Невірний E-mail або Пароль, спробуйте ще раз.</Alert>
                         <CheckBox Checked={"Запам’ятати мене"} />
-                        <AddButtonNew width={360} marginTop={26} marginBottom={24}>Увійти</AddButtonNew>
+                        <AddButtonNew showButton={true} width={360} marginTop={26} marginBottom={24}>Увійти</AddButtonNew>
                     </Form>
                 </MainSection>
                 </FormWrap>

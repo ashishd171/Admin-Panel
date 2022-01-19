@@ -34,7 +34,7 @@ const NewProductAdd = () => {
                 <D.InputBox>
                     <D.Label>Статус</D.Label>
                     <D.DropDownContainer>
-                        <D.DropDownHeader onClick={toggling}><D.IconSpan></D.IconSpan>Активный<D.Icon src='arrow-down.png'></D.Icon></D.DropDownHeader>
+                        <D.DropDownHeader onClick={toggling}><D.IconSpan></D.IconSpan>Активный<D.Icon src='/images/arrow-down.png'></D.Icon></D.DropDownHeader>
                         {isOpen && (
                             <D.DropDownListContainer>
                                 <D.DropDownList>
@@ -77,7 +77,7 @@ const NewProductAdd = () => {
                 </D.MainBox>
                 <D.MainBox>
                     <D.ImgBox>
-                        <D.BoxImg src="drag-icon.png"></D.BoxImg>
+                        <D.BoxImg src="/icons/drag-icon.png"></D.BoxImg>
                     </D.ImgBox>
                     <D.TextBox>
                         <D.textInput type="text" placeholder='Введіть назву'></D.textInput>

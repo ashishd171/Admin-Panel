@@ -3,7 +3,8 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
     background-color: #fff;
     padding: 10px 24px;
-    width:100%;
+    // width:100%;
+    margin: 24px;
 `;
 
 const container = styled.div`

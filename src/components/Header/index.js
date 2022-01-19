@@ -4,13 +4,13 @@ import Button from '../AddButtonNew'
 import SearchInput from '../SearchInput';
 import ViewButton from '../ViewButton';
 
-const Header = ({showInput,listgridbtn, productDesign,handleProduct}) => {
+const Header = ({showButton,showInput,listgridbtn, productDesign,handleProduct}) => {
     return (
         <Wrapper>
             <Title>Головна</Title>
             <SubHeading>
                 <SubTitle>Головна</SubTitle>
-                <Button children={"+ Додати"} />
+                <Button showButton={showButton} children={"+ Додати"} />
             </SubHeading>
             <SubWrapper>
                 <SearchInput showInput={showInput} />

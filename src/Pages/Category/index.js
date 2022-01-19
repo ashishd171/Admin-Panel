@@ -13,11 +13,11 @@ const Category = () => {
     
     const CatagoryCard= [
         {Image: "./images/Pizzaimage.png", name: "Піца"},
-        {Image: "./images/Pizzaimage.png", name: "Піца"},
-        {Image: "./images/Pizzaimage.png", name: "Піца"},
-        {Image: "./images/Pizzaimage.png", name: "Піца"},
-        {Image: "./images/Pizzaimage.png", name: "Піца"},
-        {Image: "./images/Pizzaimage.png", name: "Піца"},
+        {Image: "./images/Juiceimage.png", name: "ПіНапоїца"},
+        {Image: "./images/Hotdrinks.png", name: "Гарячі напої"},
+        {Image: "./images/Lunchcard.svg", name: "Ланчі"},
+        {Image: "./images/Snacksimage.png", name: "Снеки"},
+        {Image: "./images/Sweetsimage.png", name: "Солодощі"},
     ]
     const [isModal,setIsModal]=useState(false);
     const handleModal=()=>{
@@ -32,7 +32,7 @@ const Category = () => {
             <TopBar />
             <FlexContainer>
                 <SideBar />
-                <DashBoard showInput={true} listgridbtn={true} productDesign={product} handleProduct={(valuechnage)=>setProduct(valuechnage)}>
+                <DashBoard showButton={!isModal} showInput={ !isModal } listgridbtn={!isModal} productDesign={product} handleProduct={(valuechnage)=>setProduct(valuechnage)}>
                     {
                         product && !isModal ? <ProductGrid CardStructure={CatagoryCard} Cardtype={"Category"}/> : <ProductList isModal={isModal} toggle={handleModal}/>
                     }

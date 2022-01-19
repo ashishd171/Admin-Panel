@@ -12,7 +12,7 @@ const ProductList = ({toggle, isModal}) => {
         <div>
             {
                 isModal ?
-                <CategoryItemEdit />
+                <CategoryItemEdit  togll/>
                 :
 
             

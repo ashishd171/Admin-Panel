@@ -3,7 +3,7 @@ import {Edit,Dot,Wrapper,Name,Card,BottomSection,Image,Anchor} from './style'
 import { HiOutlinePencil } from "react-icons/hi";
 
 const ProductGrid = ({CardStructure, Cardtype}) => {
-    //  console.log(CardStructure,Cardtype==="Category")
+
     return (
         <Wrapper>
             {CardStructure?.map((item, index)=>{

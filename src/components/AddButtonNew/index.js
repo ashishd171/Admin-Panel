@@ -2,7 +2,7 @@ import React from "react";
 import { CgEnter } from "react-icons/cg";
 import A from './Style';
 
-const Button = ({
+const Button = ({showButton,
     border,
     color,
     children,
@@ -25,6 +25,7 @@ const Button = ({
     marginRight
 }) => {
     return (
+        <> { showButton ?
         <A.Button
             onClick={onClick}
             style={{
@@ -51,6 +52,9 @@ const Button = ({
         >
             {children}
         </A.Button>
+        : null}
+        </>
+
     );
 }
 export default Button;

@@ -20,10 +20,10 @@ import OrderAll from '../../components/Order/AllOders';
 import Reviews from '../Reviews/index';
 
 
-const DashBoard = ({ children, showInput, listgridbtn, productDesign, handleProduct }) => {
+const DashBoard = ({ children, showButton, showInput, listgridbtn, productDesign, handleProduct }) => {
     return (
         <Wrapper>   
-            <Header showInput={showInput}  listgridbtn={listgridbtn} productDesign={productDesign} handleProduct={handleProduct}/>
+            <Header showButton={showButton} showInput={showInput}  listgridbtn={listgridbtn} productDesign={productDesign} handleProduct={handleProduct}/>
             {children}
             {/* <TodayIncomeCard /> */}
             {/* <SearchInput /> */}

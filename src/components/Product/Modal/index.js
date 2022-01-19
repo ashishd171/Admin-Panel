@@ -41,7 +41,9 @@ function FancyModalButton() {
                 <M.ModalHeader>Підтвердження</M.ModalHeader>
                 <M.ModalText>Ви впевнені, що хочете видалити товар “Папероні”?</M.ModalText>
                 <M.ButtonBox>
-                    <Button onClick={toggleModal} 
+                    <Button 
+                    showButton={true}
+                    onClick={toggleModal} 
                     children="Так" 
                     width="55px"
                     border="1px solid #D9D9D9"
@@ -52,6 +54,7 @@ function FancyModalButton() {
                     marginRight={"10px"}
                     />
                     <Button
+                    showButton={true}
                     children="Ні" 
                     width="46px"
                     color="#fff"
