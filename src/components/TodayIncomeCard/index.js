@@ -12,7 +12,7 @@ const TodayIncomeCard = () => {
         <Wrapper>
             {Table.map((items,index) => {
                 return(
-                    <Card>
+                    <Card key={index}>
                         <IncomeDetail>
                             <IncomeDetailPara>{items.incomedetail}</IncomeDetailPara><AiOutlineInfoCircle  />
                         </IncomeDetail>

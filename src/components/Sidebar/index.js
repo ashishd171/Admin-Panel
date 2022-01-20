@@ -9,71 +9,64 @@ import { IoDocumentTextOutline, IoDocumentTextSharp } from "react-icons/io5";
 import { BsPeople, BsPeopleFill } from "react-icons/bs";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { useHistory } from "react-router-dom";
+import Routes from '../../Routes';
 
-const SideBar = () => {
+const SideBar = ({history}) => {
+    console.log(history,"history")
     const [open, setOpen] = useState(false);
     const [opensecond, setOpenSecond] = useState(false);
     const [icon, setIcon] = useState("home");
-    // console.log(icon)
-
-    const history = useHistory();
 
     const handleActive = (val) => {
-        // console.log(val, "val")
         setIcon(val)
-        // console.log(val)
+        console.log(val,'value sidebar')
     }
+    
     return (
         <Wrapper>
             <Sidebar>
                 <MenuBar>
                     <UnorderList>
                         <List>{icon == 'home' ? <AiTwotoneHome /> : <AiOutlineHome />}
-                        <Anchor onClick={(event) => {
-                            
-                            history.push('/homepage')
-                            event.preventDefault()
+                        <Anchor  onClick={(event) => {
+                            history.push('/')
                             handleActive('home')
                         }}>Головна</Anchor>
                         </List>
 
                         <List>{icon == 'category' ? <BsGridFill /> : <BsGrid />}
                         <Anchor onClick={(event) =>{
-                            
                             history.push('/category')
-                            event.preventDefault()
                             handleActive('category')
                         }}>Категорії</Anchor>
                         </List>
 
-                        <List>{icon == 'order' ? <IoDocumentTextSharp /> : <IoDocumentTextOutline />} <Anchor onClick={(event) => {
-                            
-                            history.push('/orders')
-                            handleActive('order');
+                        <List>{icon == 'order' ? <IoDocumentTextSharp /> : <IoDocumentTextOutline />} 
+                        <Anchor onClick={(event) => {
+                            history.push('/order')
+                            handleActive('order');                           
                         }}>Замовлення</Anchor>
                         </List>
 
                         <List>{icon == 'user' ? <BsPeopleFill /> : <BsPeople />}
                         <Anchor  onClick={(event) => {
-
-                            handleActive('user')
                             history.push('/user')
+                            handleActive('user')
                         }}>Користувачі</Anchor>
                         </List>
 
                         <List>{icon == 'reviews' ? <BsChatLeftDotsFill /> : <BsChatLeftDots />}
                         <Anchor onClick={(event) => {
-
-                            handleActive('reviews')
                             history.push('/reviews')
+                            handleActive('reviews')
                         }}>Відгуки</Anchor>
                         </List>
 
                         <List>{icon == 'pushnotification' ? <BsFillBellFill /> : <BsBell />}
                         <Anchor onClick={(event) => {
-
-                            handleActive('pushnotification')
                             history.push('/pushnotification')
+                            handleActive('pushnotification')
+                            
                         }}>Push Нотіфікації</Anchor>
                         </List>
 

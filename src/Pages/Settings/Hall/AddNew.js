@@ -1,9 +1,7 @@
 import React from 'react';
-
 import DeleteButton from '../../../components/DeleteButton';
 import InputBox from '../../../components/InputBox/index';
-// import { Input } from '../../../../components/SearchInput';
-import { FlexContainer, Wrapper, Image,Addnew,Imagediv,AddNewInput,AddnewSubWrapper } from './style';
+import { Image,Addnew,Imagediv,AddNewInput,AddnewSubWrapper } from './style';
 import Button from '../../../components/AddButtonNew';
 
 const AddNew = () => {

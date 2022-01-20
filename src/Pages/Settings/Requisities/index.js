@@ -9,17 +9,9 @@ import SettingLocationDetail from '../../../components/SettingLocationDetail';
 
 const Requisities = () => {
     return (
-        <div>
-            <Wrapper>
-                <TopBar />
-                <FlexContainer>
-                    <SideBar />
-                    <DashBoard showInput={false} listgridbtn={false}>
-                    <SettingLocationDetail />
-                    </DashBoard>
-                </FlexContainer>
-            </Wrapper>
-        </div>
+        <>
+        <SettingLocationDetail />
+        </>
     );
 }
 

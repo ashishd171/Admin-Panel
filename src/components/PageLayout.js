@@ -1,13 +1,27 @@
 import React from 'react';
+import DashBoard from './DashBoard';
+import { Wrapper } from '../Pages/HomePage/style';
+import SideBar from './Sidebar';
+import TopBar from './TopBar';
+import  '../Pages/HomePage/style'
+import Routes from '../Routes';
+import { useHistory } from 'react-router-dom';
 
-const Pagelayout = () => {
+const Pagelayout = ({}) => {
+
+    const history = useHistory();
+
+    console.log(history)
     return (
-        <div className={styles.appWrapper}>
-            <Header />
-            <Sidebar />
-            <div className={styles.pageWrapper}>{children}</div>
-        </div>
-        
+        <Wrapper>
+           <TopBar />
+           <div className='flex-container'>
+                <SideBar/>
+                <DashBoard>
+                    <Routes />
+                </DashBoard>
+           </div>
+        </Wrapper>
     );
 }
 
