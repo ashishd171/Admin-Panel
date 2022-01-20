@@ -21,13 +21,13 @@ const Category = () => {
     }
     const history = useHistory()
     console.log(history,"test");
-  
+    // showButton={!isModal} showInput={!isModal} listgridbtn={!isModal} productDesign={product} handleProduct={(valuechnage) => setProduct(valuechnage)}
     return (
-        <DashBoard showButton={!isModal} showInput={!isModal} listgridbtn={!isModal} productDesign={product} handleProduct={(valuechnage) => setProduct(valuechnage)}>
+        <div>
             {
                 product && !isModal ? <ProductGrid CardStructure={CatagoryCard} Cardtype={"Category"} /> : <ProductList isModal={isModal} toggle={handleModal} />
             }
-        </DashBoard>
+        </div>
     );
 }
 

@@ -8,11 +8,12 @@ import { BsBarChartLineFill, BsBarChartLine } from "react-icons/bs";
 import { IoDocumentTextOutline, IoDocumentTextSharp } from "react-icons/io5";
 import { BsPeople, BsPeopleFill } from "react-icons/bs";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import { useHistory } from "react-router-dom";
-import Routes from '../../Routes';
+import { useHistory } from 'react-router-dom';
+ 
+const SideBar = () => {
+    
+    const history = useHistory()
 
-const SideBar = ({history}) => {
-    console.log(history,"history")
     const [open, setOpen] = useState(false);
     const [opensecond, setOpenSecond] = useState(false);
     const [icon, setIcon] = useState("home");
@@ -27,42 +28,42 @@ const SideBar = ({history}) => {
             <Sidebar>
                 <MenuBar>
                     <UnorderList>
-                        <List>{icon == 'home' ? <AiTwotoneHome /> : <AiOutlineHome />}
+                        <List>{icon === 'home' ? <AiTwotoneHome /> : <AiOutlineHome />}
                         <Anchor  onClick={(event) => {
                             history.push('/')
                             handleActive('home')
                         }}>Головна</Anchor>
                         </List>
 
-                        <List>{icon == 'category' ? <BsGridFill /> : <BsGrid />}
+                        <List>{icon === 'category' ? <BsGridFill /> : <BsGrid />}
                         <Anchor onClick={(event) =>{
                             history.push('/category')
                             handleActive('category')
                         }}>Категорії</Anchor>
                         </List>
 
-                        <List>{icon == 'order' ? <IoDocumentTextSharp /> : <IoDocumentTextOutline />} 
+                        <List>{icon === 'order' ? <IoDocumentTextSharp /> : <IoDocumentTextOutline />} 
                         <Anchor onClick={(event) => {
                             history.push('/order')
                             handleActive('order');                           
                         }}>Замовлення</Anchor>
                         </List>
 
-                        <List>{icon == 'user' ? <BsPeopleFill /> : <BsPeople />}
+                        <List>{icon === 'user' ? <BsPeopleFill /> : <BsPeople />}
                         <Anchor  onClick={(event) => {
                             history.push('/user')
                             handleActive('user')
                         }}>Користувачі</Anchor>
                         </List>
 
-                        <List>{icon == 'reviews' ? <BsChatLeftDotsFill /> : <BsChatLeftDots />}
+                        <List>{icon === 'reviews' ? <BsChatLeftDotsFill /> : <BsChatLeftDots />}
                         <Anchor onClick={(event) => {
                             history.push('/reviews')
                             handleActive('reviews')
                         }}>Відгуки</Anchor>
                         </List>
 
-                        <List>{icon == 'pushnotification' ? <BsFillBellFill /> : <BsBell />}
+                        <List>{icon === 'pushnotification' ? <BsFillBellFill /> : <BsBell />}
                         <Anchor onClick={(event) => {
                             history.push('/pushnotification')
                             handleActive('pushnotification')

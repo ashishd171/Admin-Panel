@@ -44,7 +44,7 @@ const ReviewTable = () => {
                     <Table.Body>
                         {TableRow.map((items, index) => {
                             return (
-                                <Table.TR>
+                                <Table.TR key={index}>
                                     <Table.TD>{index + 1}</Table.TD>
                                     <Table.TD>{items.Date}</Table.TD>
                                     <Table.TD>{items.Name}</Table.TD>
@@ -52,7 +52,7 @@ const ReviewTable = () => {
                                         {rattingImg.map((img, index) => {
                                             return (
                                                 <>
-                                                    {index + 5 ? <RattingIcon src={img.Ratting}></RattingIcon>
+                                                    {index + 1 ? <RattingIcon src={img.Ratting}></RattingIcon>
                                                     : null}
                                                 </>
                                             )

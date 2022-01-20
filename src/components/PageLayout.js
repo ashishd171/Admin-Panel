@@ -5,14 +5,11 @@ import SideBar from './Sidebar';
 import TopBar from './TopBar';
 import  '../Pages/HomePage/style'
 import Routes from '../Routes';
-import { useHistory } from 'react-router-dom';
+import {BrowserRouter as Router} from "react-router-dom";
 
 const Pagelayout = ({}) => {
-
-    const history = useHistory();
-
-    console.log(history)
     return (
+        <Router>
         <Wrapper>
            <TopBar />
            <div className='flex-container'>
@@ -22,7 +19,7 @@ const Pagelayout = ({}) => {
                 </DashBoard>
            </div>
         </Wrapper>
+        </Router>
     );
 }
-
 export default Pagelayout;

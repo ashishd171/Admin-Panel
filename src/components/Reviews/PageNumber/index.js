@@ -27,7 +27,7 @@ const PageNumber = () => {
                 </Table.ArrowBox>
                 {Number.map((number, index) => {
                     return (
-                        <Table.ArrowBox>
+                        <Table.ArrowBox key={index}>
                             <Table.Number>{number.Number1}</Table.Number>
                         </Table.ArrowBox>
                     )
@@ -44,7 +44,7 @@ const PageNumber = () => {
                 <Table.InputBox>
                     <D.DropDownContainer>
                         <Table.DropDownHeader
-                        >6/сторінка<D.Icon src='arrow-down.png'></D.Icon></Table.DropDownHeader>
+                        >6/сторінка<D.Icon src='./images/arrow-down.png'></D.Icon></Table.DropDownHeader>
                     </D.DropDownContainer>
                 </Table.InputBox>
             </Table.NumberBox>

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Input } from '../InputBox/style';
 
-const SpecialOfferEdit = () => {
+const SpecialOfferEdit = (props) => {
+    console.log(props)
     return (
         <div>
             Specialofferedit page ...

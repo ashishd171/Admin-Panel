@@ -91,7 +91,6 @@ export const List = styled.li`
     list-style-type: none;
     font-family: Roboto;
     font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 22px;
     text-decoration: none;
@@ -103,6 +102,9 @@ export const List = styled.li`
         background: #FFEFB0;
         font-weight: 500;
         color: black;
+    }
+    :active{
+        font-weight: 700;
     }
     svg{
         margin-right: 10px;
