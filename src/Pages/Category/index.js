@@ -6,7 +6,6 @@ import ProductList from '../../components/ProductList';
 
 const Category = () => {
     const [product, setProduct] = useState(true)
-
     const CatagoryCard = [
         { Image: "./images/Pizzaimage.png", name: "Піца" },
         { Image: "./images/Juiceimage.png", name: "ПіНапоїца" },
@@ -20,7 +19,6 @@ const Category = () => {
         setIsModal(!isModal)
     }
     const history = useHistory()
-    console.log(history,"test");
     // showButton={!isModal} showInput={!isModal} listgridbtn={!isModal} productDesign={product} handleProduct={(valuechnage) => setProduct(valuechnage)}
     return (
         <div>
@@ -30,5 +28,4 @@ const Category = () => {
         </div>
     );
 }
-
 export default Category;

@@ -59,7 +59,8 @@ export const Wrapper = styled.div`
         text-decoration: none;
         color: black;
         padding: 12px;
-        font-weight: 400;
+        // font-weight: 400;
+        font-weight:${({clicked}) => clicked ? 500 : 400};   
         color: #1C1C1C;
         padding-left: 35px;
         :hover{
@@ -96,15 +97,11 @@ export const List = styled.li`
     text-decoration: none;
     color: black;
     padding: 12px;
-    font-weight: 400;
     color: #1C1C1C;
     :hover{
         background: #FFEFB0;
         font-weight: 500;
         color: black;
-    }
-    :active{
-        font-weight: 700;
     }
     svg{
         margin-right: 10px;
@@ -116,13 +113,15 @@ export const List = styled.li`
         margin-top: 4px;
         margin-left: 5px;
     }
-   
 `
-export const Anchor = styled.div`
+    export const Anchor = styled.div`
     cursor: pointer;
     text-decoration: none;
     color: #1C1C1C;   
+    font-weight:${({selected}) => selected ? 500 : 400};   
     :hover{
         color: black;
+        font-weight: 500;
+
     }
 `

@@ -19,6 +19,7 @@ export const TableWrap = styled.table`
     width: 100%;
     table-layout: fixed;
 `
+export const TableBody = styled.tbody``
 export const TableRow = styled.tr`
 border-bottom: 1px solid #dddddd69;
 `
@@ -142,5 +143,4 @@ export const Span = styled.span`
     margin-right: 7px;
     vertical-align: middle;
 `
-
 export const Anchor = styled.a``

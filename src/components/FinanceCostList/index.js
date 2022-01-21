@@ -1,5 +1,6 @@
 import React from 'react';
-import {Wrapper, Title,TableWrap, TableRow,TableFooter,TableDataEdit,Anchor, TableHeadingThird,TableHeadingFourth,TableDataTotal, TableHeadingFirst, TableHeadingSecond, TableData } from './Style'
+import {Wrapper, Title,TableWrap,TableBody, TableRow,TableFooter,TableDataEdit,Anchor, TableHeadingThird,TableHeadingFourth,TableDataTotal, TableHeadingFirst, TableHeadingSecond, TableData } from './Style'
+
 const FinanceCostList = () => {
     const Arrayname=[
         {paperon: "Папероні"},
@@ -11,20 +12,18 @@ const FinanceCostList = () => {
             <Wrapper>
             <Title>Основні</Title>
             <TableWrap>
+                    <TableBody>
                     <TableRow>
                         <TableHeadingFirst>Назва</TableHeadingFirst>
                         <TableHeadingSecond>Кукурудза</TableHeadingSecond>
                         <TableHeadingThird>Ціна</TableHeadingThird>
                         <TableHeadingThird>К-ть</TableHeadingThird>
                         <TableHeadingFourth>Всього</TableHeadingFourth>
-                        <TableHeadingFourth>Дія</TableHeadingFourth>
-
-
-                        
+                        <TableHeadingFourth>Дія</TableHeadingFourth>                        
                     </TableRow>
                     {Arrayname.map((item, index) => {
                         return (
-                            <TableRow>
+                            <TableRow key={index}>
                                 <TableData>{item.paperon}</TableData>
                                 <TableData>Піца</TableData>
                                 <TableData>30</TableData>
@@ -34,20 +33,20 @@ const FinanceCostList = () => {
                             </TableRow>
                         )
                     })}
+                    </TableBody>
                     <TableFooter>
+                    <TableRow>
                     <TableDataTotal>Всього:</TableDataTotal>
                     <TableData></TableData>
                     <TableData></TableData>
                     <TableData></TableData>
                     <TableData></TableData>
                     <TableDataTotal>1455</TableDataTotal>
+                    </TableRow>
                     </TableFooter>
                 </TableWrap>
-
-                
             </Wrapper>
         </div>
     );
 }
-
 export default FinanceCostList;

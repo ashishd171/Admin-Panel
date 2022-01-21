@@ -16,9 +16,7 @@ const Header = ({showButton,showInput,listgridbtn, productDesign,handleProduct})
                 <SearchInput showInput={showInput} />
                 <ViewButton  listgridbtn={listgridbtn} productDesign={productDesign} handleProduct={handleProduct}/>
             </SubWrapper>
-            
         </Wrapper>
     );
 }
-
 export default Header;
