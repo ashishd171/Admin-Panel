@@ -1,7 +1,6 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import './App.css';
-// import Pagelayout from './components/PageLayout';
-import { useHistory, BrowserRouter, Switch } from 'react-router-dom';
+import { BrowserRouter, Switch } from 'react-router-dom';
 import LogIn from './Pages/Login';
 import HomePage from './Pages/HomePage';
 import PublicRoute from './Routes/PublicRoute';
@@ -26,26 +25,25 @@ import Partners from './Pages/Settings/Partners';
 import Staff from './Pages/Settings/Staff';
 import CategoryItemEdit from './components/category/CategoryItemEdit';
 import SpecialOfferEdit from './components/SpecialOfferList/SpecialOfferEdit';
-import GlobalContext from "./components/GlobalContext"
 
-const App = ({ Component, pageProps }) => {
+const App = () => {
 
-  const [showButton, setshowButton] = useState();
+  const [pageURL, setPageURL] = useState();
 
-  const history = useHistory();
-  const contextObject = {showButton}
+  useEffect(() => {
+    setPageURL(window.location.pathname);
+  })
+
   return (
     <div className="App">
-      <GlobalContext.Provider value={contextObject}>
+       {/* <h3>{pageURL}</h3> */}
         <BrowserRouter>
-          <Component {...pageProps} />
           <Switch>
             <Wrapper>
               <TopBar />
               <div className='flex-container'>
                 <SideBar />
                 <DashBoard>
-                  {/* <Pagelayout history={history} /> */}
                   <PublicRoute component={LogIn} path="/login" />
                   <PrivateRoute component={SpecialOfferEdit} path="/specialoffer/item/edit/" />
                   <PrivateRoute component={CategoryItemEdit} path="/category/item/edit/" />
@@ -63,13 +61,12 @@ const App = ({ Component, pageProps }) => {
                   <PrivateRoute component={Locations} path="/location" />
                   <PrivateRoute component={Orders} path="/order" />
                   <PrivateRoute component={Category} path="/category" />
-                  <PrivateRoute component={HomePage} path="/homepage" exact />
+                  <PrivateRoute component={HomePage} path="/" exact />
                 </DashBoard>
               </div>
             </Wrapper>
           </Switch>
         </BrowserRouter>
-      </GlobalContext.Provider>
 
     </div>
   );

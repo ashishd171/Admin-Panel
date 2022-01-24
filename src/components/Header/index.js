@@ -10,11 +10,11 @@ const Header = ({showButton,showInput,listgridbtn, productDesign,handleProduct})
             <Title>Головна</Title>
             <SubHeading>
                 <SubTitle>Головна</SubTitle>
-                <Button showButton={showButton} children={"+ Додати"} />
+                <Button showButton={true} children={"+ Додати"} />
             </SubHeading>
             <SubWrapper>
-                <SearchInput showInput={showInput} />
-                <ViewButton  listgridbtn={listgridbtn} productDesign={productDesign} handleProduct={handleProduct}/>
+                <SearchInput showInput={true} />
+                <ViewButton  listgridbtn={true} productDesign={productDesign} handleProduct={handleProduct}/>
             </SubWrapper>
         </Wrapper>
     );
