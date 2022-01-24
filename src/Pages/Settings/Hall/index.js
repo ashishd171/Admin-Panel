@@ -8,8 +8,8 @@ const Hall = () => {
     return (
         <>
         <HallList />
-        <EmptyState />
-        <AddNew />
+        {/* <EmptyState /> */}
+        {/* <AddNew /> */}
         </>
     );
 }

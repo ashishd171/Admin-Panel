@@ -28,22 +28,18 @@ import SpecialOfferEdit from './components/SpecialOfferList/SpecialOfferEdit';
 
 const App = () => {
 
-  const [pageURL, setPageURL] = useState();
-
-  useEffect(() => {
-    setPageURL(window.location.pathname);
-  })
+  const pageLocation = window.location.pathname
+  console.log(pageLocation, 'app')
 
   return (
     <div className="App">
-       {/* <h3>{pageURL}</h3> */}
         <BrowserRouter>
           <Switch>
             <Wrapper>
               <TopBar />
               <div className='flex-container'>
                 <SideBar />
-                <DashBoard>
+                <DashBoard showButton={pageLocation === '/category'} showInput={pageLocation === '/category'} >
                   <PublicRoute component={LogIn} path="/login" />
                   <PrivateRoute component={SpecialOfferEdit} path="/specialoffer/item/edit/" />
                   <PrivateRoute component={CategoryItemEdit} path="/category/item/edit/" />

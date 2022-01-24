@@ -4,7 +4,6 @@ import PageNumber from "../PageNumber";
 import Table from './style';
 import { MainBox, TH1, TH2, TH3, TH4, TH5, TH6, TableBox, RattingIcon, } from './style'
 
-
 const ReviewTable = () => {
 
     const TableRow = [
@@ -65,8 +64,8 @@ const ReviewTable = () => {
                         })}
                     </Table.Body>
                 </Table.Table>
+                <PageNumber />
             </TableBox>
-            <PageNumber />
         </>
     )
 }

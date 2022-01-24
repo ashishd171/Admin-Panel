@@ -3,12 +3,12 @@ import styled from "styled-components";
 export const MainBox = styled.div`
     display:flex;
     width:100%;
-    
 `;
 
 export const TableBox = styled.div`
-    width:100%;
+    // width:100%;
     background-color: #fff;
+    margin: 24px;
 `;
 
 export const TH1 = styled.td`

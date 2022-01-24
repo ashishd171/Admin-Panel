@@ -4,6 +4,10 @@ export const Wrapper = styled.div`
     background: #FFFFFF;
     padding: 0px 24px;
     margin-left: 2px;
+    position: fixed;
+    width: 85%;
+    right: 0;
+    top: 64px;
 `;
 
 export const SubHeading = styled.div`

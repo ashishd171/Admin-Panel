@@ -4,6 +4,10 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     position: relative;
+    margin: 24px;
+    background: #fff;
+    padding: 24px;
+    z-index: -1;
     a{
         text-decoration: none;
         text-decoration: none;

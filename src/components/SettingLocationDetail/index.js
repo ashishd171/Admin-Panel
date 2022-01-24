@@ -9,7 +9,7 @@ const SettingLocationDetail = () => {
         <Wrapper>
            <DetailPage>
                 <InputBox className="inputstyle" placeholder={"Лозівок"}  label={" Населений пункт:"}  />
-                <Button children={"Зберегти"} alignSelf={"center"} float={"right"} width={156} />
+                <Button showButton={true} children={"Зберегти"} alignSelf={"center"} float={"right"} width={156} />
             </DetailPage>
             <Anchor href="#"><RiDeleteBinLine />  Видалити локацію</Anchor>
             

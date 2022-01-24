@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
+    position: fixed;
+    top: 67px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
     .toggler{
         background-color: white;
         border: none;

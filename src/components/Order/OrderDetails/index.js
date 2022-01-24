@@ -27,7 +27,7 @@ const OrderDetails = () => {
                     <Table.Body>
                         {TableRow.map((items, index) => {
                             return (
-                                <Table.TR>
+                                <Table.TR key={index}>
                                     <Table.TD>{items.Number}<br /><Span1>{items.Span}</Span1></Table.TD>
                                     <Table.TD>{items.Date}</Table.TD>
                                     <Table.TD>{items.Status}</Table.TD>

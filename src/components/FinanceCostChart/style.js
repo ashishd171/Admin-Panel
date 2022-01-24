@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
     padding: 24px;
     background: #fff;
     position: relative;
+    z-index: -1;
 `
 export const Text = styled.p`
     position: absolute;

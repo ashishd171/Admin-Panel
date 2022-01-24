@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div``
+export const Wrapper = styled.div`
+    position: fixed;
+    width: 100%;
+`
 export const Logo = styled.div`
     background: #E6F7FF;
     border: 1px dashed #91D5FF;

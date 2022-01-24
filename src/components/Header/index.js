@@ -5,6 +5,7 @@ import SearchInput from '../SearchInput';
 import ViewButton from '../ViewButton';
 
 const Header = ({showButton,showInput,listgridbtn, productDesign,handleProduct}) => {
+   
     return (
         <Wrapper>
             <Title>Головна</Title>

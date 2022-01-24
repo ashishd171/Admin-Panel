@@ -7,7 +7,7 @@ import CategoryItemEdit from '../category/CategoryItemEdit';
 const ProductList = ({ toggle, isModal }) => {
     const history = useHistory();
     const Tabl = [1, 2, 3, 4, 5, 6]
-    console.log("handleModal", toggle)
+    // console.log("handleModal", toggle)
     return (
         <div>
             {

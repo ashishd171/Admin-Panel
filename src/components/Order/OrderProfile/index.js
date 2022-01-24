@@ -33,7 +33,7 @@ const OrderProfile = () => {
                     <TextBoxMain>
                         {Deliverys.map((details, index) => {
                             return (
-                                <TextBox>
+                                <TextBox key={index}>
                                     <ProfileTextHead>{details.Delivery}</ProfileTextHead>
                                     <ProfileText>{details.DeliveryName}</ProfileText>
                                 </TextBox>
