@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const MainBox = styled.div`
-    display:flex;
     width:100%;
+    @media screen and (max-width:767px){
+        overflow:auto;
+    }
     
 `;
 

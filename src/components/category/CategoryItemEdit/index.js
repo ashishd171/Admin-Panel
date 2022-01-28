@@ -9,7 +9,7 @@ import Header from '../../Header';
 import Button from '../../AddButtonNew';
 
 const CategoryItemEdit = () => {
- 
+
     const [isOpen, setIsOpen] = useState(false);
     const toggling = () => setIsOpen(!isOpen);
 
@@ -22,11 +22,11 @@ const CategoryItemEdit = () => {
                 <FancyModalButton />
             </ModalProvider>
             <D.container>
-            <D.uploadImgBox>
+                <D.uploadImgBox>
                     <D.AddBox>
                         {/* <D.AddIconBox> */}
-                            {/* <D.AddText><D.AddIcon>+</D.AddIcon> Завантажити</D.AddText> */}
-                            <E.UploadText src="/images/Lunch-image.png" ></E.UploadText>
+                        {/* <D.AddText><D.AddIcon>+</D.AddIcon> Завантажити</D.AddText> */}
+                        <E.UploadText src="/images/Lunch-image.png" ></E.UploadText>
                         {/* </D.AddIconBox> */}
                         {/* <D.UploadText type='file' ></D.UploadText> */}
                     </D.AddBox>
@@ -45,15 +45,15 @@ const CategoryItemEdit = () => {
                             <D.DropDownListContainer>
                                 <D.DropDownList>
                                     {dropDown.map((items, index) => {
-                                        return (                                        
-                                    <D.ListItem><D.IconSpan></D.IconSpan> Активный</D.ListItem>
-                                    )
+                                        return (
+                                            <D.ListItem><D.IconSpan></D.IconSpan> Активный</D.ListItem>
+                                        )
                                     })}
                                 </D.DropDownList>
                             </D.DropDownListContainer>
                         )}
                     </D.DropDownContainer>
-                    
+
                 </D.InputBox>
                 <Button showButton={true} children={"Зберегти"} marginTop="32" width="156px" />
             </D.container>

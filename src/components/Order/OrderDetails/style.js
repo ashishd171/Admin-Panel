@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const MainBox = styled.div`
     display:flex;
     width:100%;
+    @media screen and (max-width:767px){
+        display:block;
+    }
 
 `;
 
@@ -11,6 +14,10 @@ export const TableBox = styled.div`
     background: #fff;
     padding: 24px;
     margin: 24px;
+    @media screen and (max-width:767px) {
+        margin:unset;
+        overflow:auto;
+    }
 `;
 export const Status = styled.p`
     font-weight: 500;

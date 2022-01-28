@@ -6,6 +6,9 @@ export const Container = styled.div`
     padding: 24px;
     margin: 24px 24px 24px 0px;
     background: #fff;
+    @media screen and (max-width:767px){
+        max-width:unset;
+    }
 `;
 
 export const ProfileNameBox = styled.div`

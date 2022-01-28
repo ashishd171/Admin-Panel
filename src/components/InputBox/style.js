@@ -8,10 +8,13 @@ export const Input = styled.input`
     box-sizing: border-box;
     border-radius: 2px;
     margin-bottom:16px;
-    width: 360px;
+    width: 100%;
     padding: 9px;
     &:focus{
         outline: none !important;
+    }
+    @media screen and (max-width:767px){
+        width:100%;
     }
 `
 export const Label = styled.label`

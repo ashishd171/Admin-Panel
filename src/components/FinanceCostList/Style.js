@@ -3,6 +3,9 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
     padding: 24px;
     background: #fff;
+    @media screen and (max-width:767px){
+        overflow:auto;
+    }
 `
 export const Title = styled.p`
     font-family: Roboto;

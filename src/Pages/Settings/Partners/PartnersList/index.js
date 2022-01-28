@@ -1,26 +1,26 @@
 import react, { useState } from "react";
 import Table from './style';
-import { MainBox, TH1, TH2, TH3, TH4, TH5, TH6,TH7, TableBox, ImageIcon, } from './style'
+import { MainBox, TH1, TH2, TH3, TH4, TH5, TH6, TH7, TableBox, ImageIcon, } from './style'
 import { HiOutlinePencil } from "react-icons/hi";
 
 
 const PartnersList = () => {
 
     const TableRow = [
-        { No:"1", Date: "11.11.2021", FullName: "Заклад", Position: "Повна адреса",Contact: "+38050 000-00-00 ", Code:"5678", Statistic:"./icons/View.png", Action: "./icons/View.png" },
-        { No:"1", Date: "11.11.2021", FullName: "Заклад", Position: "Повна адреса",Contact: "+38050 000-00-00 ", Code:"5678", Statistic:"", Action: "./icons/View.png" },
-        { No:"1", Date: "11.11.2021", FullName: "Заклад", Position: "Повна адреса",Contact: "+38050 000-00-00 ", Code:"5678", Statistic:"", Action: "./icons/View.png" },
-        { No:"1", Date: "11.11.2021", FullName: "Заклад", Position: "Повна адреса",Contact: "+38050 000-00-00 ", Code:"5678", Statistic:"", Action: "./icons/View.png" },
-        { No:"1", Date: "11.11.2021", FullName: "Заклад", Position: "Повна адреса",Contact: "+38050 000-00-00 ", Code:"5678", Statistic:"", Action: "./icons/View.png" },
-        
+        { No: "1", Date: "11.11.2021", FullName: "Заклад", Position: "Повна адреса", Contact: "+38050 000-00-00 ", Code: "5678", Statistic: "./icons/View.png", Action: "./icons/View.png" },
+        { No: "1", Date: "11.11.2021", FullName: "Заклад", Position: "Повна адреса", Contact: "+38050 000-00-00 ", Code: "5678", Statistic: "", Action: "./icons/View.png" },
+        { No: "1", Date: "11.11.2021", FullName: "Заклад", Position: "Повна адреса", Contact: "+38050 000-00-00 ", Code: "5678", Statistic: "", Action: "./icons/View.png" },
+        { No: "1", Date: "11.11.2021", FullName: "Заклад", Position: "Повна адреса", Contact: "+38050 000-00-00 ", Code: "5678", Statistic: "", Action: "./icons/View.png" },
+        { No: "1", Date: "11.11.2021", FullName: "Заклад", Position: "Повна адреса", Contact: "+38050 000-00-00 ", Code: "5678", Statistic: "", Action: "./icons/View.png" },
+
     ]
 
     // const rattingImg = [
     //     { Ratting: "./images/userphoto.svg" },
-       
+
     // ]
     return (
-        <>
+        <MainBox>
             <TableBox>
                 <Table.Table>
                     <Table.Head>
@@ -51,7 +51,7 @@ const PartnersList = () => {
                     </Table.Body>
                 </Table.Table>
             </TableBox>
-        </>
+        </MainBox>
     )
 }
 

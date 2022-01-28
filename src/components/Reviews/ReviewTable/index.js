@@ -19,10 +19,6 @@ const ReviewTable = () => {
 
     const rattingImg = [
         { Ratting: "./icons/star.png" },
-        { Ratting: "./icons/star.png" },
-        { Ratting: "./icons/star.png" },
-        { Ratting: "./icons/star.png" },
-        { Ratting: "./icons/star.png" },
     ]
     return (
         <>

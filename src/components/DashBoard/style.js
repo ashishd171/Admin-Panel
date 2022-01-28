@@ -11,6 +11,11 @@ export const Wrapper = styled.div`
     z-index: -1;
     right: 0;
     width: 85%;
+    @media screen and (max-width:767px) {
+        left:0;
+        top:38%;
+        width:100%;
+    }
 `;
 
 export const SearchBox = styled.div`

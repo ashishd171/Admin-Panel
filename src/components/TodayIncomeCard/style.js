@@ -3,6 +3,10 @@ export const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     padding: 12px;
+    @media screen and (max-width:767px){
+        justify-content:center;
+        width:100%;
+    }
 `
 export const Card = styled.div`
     border: 1px solid #E0E0E0;
@@ -22,6 +26,7 @@ export const Amount = styled.div`
     font-weight: 500;
     line-height: 40px;
 `
+
 export const IncomeDetail = styled.div`
     display: flex;
     align-items: center;
@@ -32,6 +37,7 @@ export const IncomeDetail = styled.div`
         width: 14px;
     }
 `
+
 export const PriceDetail = styled.div`
     display: flex;
     align-items: center;

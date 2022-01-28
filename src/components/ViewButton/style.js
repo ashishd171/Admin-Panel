@@ -4,6 +4,10 @@ export const Wrapper = styled.div`
     position: absolute;
     right: 0;
     top: 0;
+    @media screen and (max-width:767px){
+        position:unset;
+        text-align: left;
+    }
     svg{
         Width: 24px;
         Height: 24px;

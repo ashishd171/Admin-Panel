@@ -1,20 +1,20 @@
 import React from 'react';
-import {Wrapper, Title,TableWrap, TableRow,Anchor, TableHeadingThird,TableHeadingFourth, TableHeadingFirst, TableHeadingSecond, TableData } from './style'
+import { Wrapper, Title, TableWrap, TableRow, Anchor, TableHeadingThird, TableHeadingFourth, TableHeadingFirst, TableHeadingSecond, TableData } from './style'
 import { HiOutlinePencil } from "react-icons/hi";
 import { useHistory } from "react-router-dom";
 
 const SpecialOfferList = () => {
     const history = useHistory();
 
-    const Arrayname=[
-        {paperon: "Піца “Папероні”",secondrow: "1+1",beginningDate:"11.11.2021",graduatingDate:"11.12.2021"},
-        {paperon: "Піца “Папероні”",secondrow: "25% знижки",beginningDate:"11.11.2021",graduatingDate:"11.12.2021"},
-    
+    const Arrayname = [
+        { paperon: "Піца “Папероні”", secondrow: "1+1", beginningDate: "11.11.2021", graduatingDate: "11.12.2021" },
+        { paperon: "Піца “Папероні”", secondrow: "25% знижки", beginningDate: "11.11.2021", graduatingDate: "11.12.2021" },
+
     ]
     return (
         <div>
             <Wrapper>
-            <TableWrap>
+                <TableWrap>
                     <TableRow>
                         <TableHeadingFirst>Акційний товар</TableHeadingFirst>
                         <TableHeadingSecond>Умови акції</TableHeadingSecond>
@@ -22,8 +22,6 @@ const SpecialOfferList = () => {
                         <TableHeadingFourth>Дата закінчення</TableHeadingFourth>
                         <TableHeadingFourth>Дія</TableHeadingFourth>
 
-
-                        
                     </TableRow>
                     {Arrayname.map((item, index) => {
                         return (
@@ -32,18 +30,16 @@ const SpecialOfferList = () => {
                                 <TableData>{item.secondrow}</TableData>
                                 <TableData>{item.beginningDate}</TableData>
                                 <TableData>{item.graduatingDate}</TableData>
-                                <TableData><Anchor onClick={(event)=>{
+                                <TableData><Anchor onClick={(event) => {
                                     event.preventDefault()
-                                    history.push('/specialoffer/item/edit/'+index)}}
+                                    history.push('/specialoffer/item/edit/' + index)
+                                }}
                                     href="#"><HiOutlinePencil /></Anchor>
-                                </TableData>                           
+                                </TableData>
                             </TableRow>
                         )
                     })}
-                    
                 </TableWrap>
-
-                
             </Wrapper>
         </div>
     );

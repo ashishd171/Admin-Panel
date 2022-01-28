@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
 `
 export const Search = styled.div`
     padding-bottom: 24px;
+    display: flex;
 `
 export const Input = styled.input`
     width: 440px;
@@ -16,6 +17,9 @@ export const Input = styled.input`
     :focus{
         border: 1px solid #D9D9D9;
         outline: 1px solid #D9D9D9;
+    }
+    @media screen and (max-width:767px){
+        width:100%;
     }
 `
 export const Button = styled.button`

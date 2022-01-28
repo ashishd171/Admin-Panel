@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 export const MainBox = styled.div`
     display:flex;
-    // width:100%;
-    background: #ffffff;
-    margin: 24px;
+    width:100%;
+    @media screen and (max-width:767px){
+        overflow:auto;
+    }
+`;
 
 
 `;

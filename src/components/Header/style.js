@@ -8,6 +8,11 @@ export const Wrapper = styled.div`
     width: 85%;
     right: 0;
     top: 64px;
+    @media screen and (max-width:767px){
+        left:0;
+        width:100%;
+        padding-bottom:20px;
+    } 
 `;
 
 export const SubHeading = styled.div`
@@ -38,4 +43,7 @@ export const SubWrapper = styled.div`
     display: flex;
     justify-content: center;
     position: relative;
+    @media screen and (max-width:767px){
+        display:block;
+    }
 `
