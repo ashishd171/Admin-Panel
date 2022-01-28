@@ -20,7 +20,7 @@ const PushNotificationList = () => {
        
     ]
     return (
-        <>
+        <MainBox>
             <TableBox>
                 <Table.Table>
                     <Table.Head>
@@ -56,7 +56,7 @@ const PushNotificationList = () => {
                     </Table.Body>
                 </Table.Table>
             </TableBox>
-        </>
+        </MainBox>
     )
 }
 

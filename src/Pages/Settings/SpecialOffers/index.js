@@ -4,7 +4,7 @@ import SpecialOfferList from '../../../components/SpecialOfferList';
 const SpecialOffers = () => {
     return (
         <>
-        <SpecialOfferList />
+            <SpecialOfferList />
         </>
     );
 }

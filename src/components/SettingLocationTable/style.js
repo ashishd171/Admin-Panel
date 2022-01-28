@@ -7,6 +7,9 @@ export const Wrapper = styled.div`
     margin-left: 2px;
     margin-right: 0px;
     padding: 20px;
+    @media screen and (max-width:767px){
+        overflow:auto;
+    }
 `
 export const TableWrap = styled.table`
     width: 100%;

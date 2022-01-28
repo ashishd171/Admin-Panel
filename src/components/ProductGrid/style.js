@@ -4,6 +4,9 @@ export const Wrapper = styled.div`
     padding: 12px;  
     display: flex;
     flex-wrap: Wrap;
+    @media screen and (max-width:767px){
+        justify-content:center;
+    }
 `
 export const Image = styled.img`
     // width: 258px;

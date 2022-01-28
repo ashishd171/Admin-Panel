@@ -4,7 +4,7 @@ import SettingDelivery from '../../../components/SettingDelivery';
 const Delivery = () => {
     return (
         <>
-        <SettingDelivery />
+            <SettingDelivery />
         </>
     );
 }

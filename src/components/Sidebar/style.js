@@ -4,7 +4,10 @@ export const Wrapper = styled.div`
     position: fixed;
     top: 67px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-    .toggler{
+    @media screen and (max-width:767px) {
+        display:none;
+    }
+    .toggler {
         background-color: white;
         border: none;
         width: 98%;
@@ -20,39 +23,43 @@ export const Wrapper = styled.div`
         padding: 12px;
         font-weight: 400;
         color: #1C1C1C;
-    :hover{
+    :hover {
         background: #FFEFB0;
         font-weight: 500;
         color: black;
     }
-    svg{
+    svg {
         margin-right: 10px;
         width: 16px;
         height: 16px;   
     }
-    .arrowdown{
+    .arrowdown {
         float: right;
         align-self: center;
         margin-top: 4px;
         margin-left: 5px;
     }
-        :focus{
+        :focus {
             outline: none;
             background-color: white;
             color: #000;
             box-shadow: none;
         }
-        :after{
+        :after {
             float: right;
             margin-right: 10px;
         }
     }
 
-    .dropdownMenu{
+    .dropdownMenu {
         width: 100%;
         padding: 0;
+        position: unset !important;
+        inset: unset !important;
+        transform: unset !important;
     }
-    .dropdownItem{
+
+    .dropdownItem {
         list-style-type: none;
         font-family: Roboto;
         font-style: normal;
@@ -101,16 +108,16 @@ export const List = styled.li`
     color: black;
     padding: 12px;
     color: #1C1C1C;
-    :hover{
+    :hover {
         background: #FFEFB0;
         font-weight: 500;
         color: black;
     }
-    svg{
+    svg {
         margin-right: 10px;
         align-self: center;
     }
-    .arrowdown{
+    .arrowdown {
         float: right;
         align-self: center;
         margin-top: 4px;
@@ -122,7 +129,7 @@ export const List = styled.li`
     text-decoration: none;
     color: #1C1C1C;   
     font-weight:${({selected}) => selected ? 500 : 400};   
-    :hover{
+    :hover {
         color: black;
         font-weight: 500;
 

@@ -4,7 +4,7 @@ import StaffDetailList from './StaffDetailList';
 const Staff = () => {
     return (
         <>
-        <StaffDetailList />
+            <StaffDetailList />
         </>
     );
 }

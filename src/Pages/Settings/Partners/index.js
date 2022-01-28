@@ -4,7 +4,7 @@ import PartnersList from './PartnersList';
 const Partners = () => {
     return (
         <>
-        <PartnersList />
+            <PartnersList />
         </>
     );
 }

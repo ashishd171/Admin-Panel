@@ -21,13 +21,9 @@ const ReviewTable = () => {
 
     const rattingImg = [
         { Ratting: "./icons/star.png" },
-        { Ratting: "./icons/star.png" },
-        { Ratting: "./icons/star.png" },
-        { Ratting: "./icons/star.png" },
-        { Ratting: "./icons/star.png" },
     ]
     return (
-        <>
+        <MainBox>
             <TableBox>
                 <Table.Table>
                     <Table.Head>
@@ -66,7 +62,7 @@ const ReviewTable = () => {
                 </Table.Table>
                 <PageNumber />
             </TableBox>
-        </>
+        </MainBox>
     )
 }
 

@@ -5,7 +5,7 @@ import ReviewTable from '../../components/Reviews/ReviewTable';
 const Reviews = () => {
     return (
         <>
-        <ReviewTable />
+            <ReviewTable />
         </>
     );
 }

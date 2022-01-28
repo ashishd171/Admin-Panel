@@ -18,10 +18,15 @@ export const Wrapper = styled.div`
     svg{
         margin-right: 8px;
     }
+    @media screen and (max-width:767px){
+        margin:unset;
+    }
 `
 export const DetailPage = styled.div`
-    .inputstyle{
-        width: 539px !important;
+        width: 539px;
+        @media screen and (max-width:767px){
+            width:100%;
+        }
     }
    
 `

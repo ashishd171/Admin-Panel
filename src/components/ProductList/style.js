@@ -3,6 +3,9 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
     background: #fff;
     margin: 24px;
+    @media screen and (max-width:767px){
+        overflow:auto;
+    }
 `
 export const ProdTable = styled.table`
     width: 100%;

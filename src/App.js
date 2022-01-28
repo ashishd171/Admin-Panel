@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter, Switch } from 'react-router-dom';
 import LogIn from './Pages/Login';
@@ -33,36 +33,36 @@ const App = () => {
 
   return (
     <div className="App">
-        <BrowserRouter>
-          <Switch>
-            <Wrapper>
-              <TopBar />
-              <div className='flex-container'>
-                <SideBar />
-                <DashBoard showButton={pageLocation === '/category'} showInput={pageLocation === '/category'} >
-                  <PublicRoute component={LogIn} path="/login" />
-                  <PrivateRoute component={SpecialOfferEdit} path="/specialoffer/item/edit/" />
-                  <PrivateRoute component={CategoryItemEdit} path="/category/item/edit/" />
-                  <PrivateRoute component={Staff} path="/staff" />
-                  <PrivateRoute component={Partners} path="/partners" />
-                  <PrivateRoute component={Requisities} path="/requisities" />
-                  <PrivateRoute component={Delivery} path="/delivery" />
-                  <PrivateRoute component={SpecialOffers} path="/specialoffers" />
-                  <PrivateRoute component={PushNotification} path="/pushnotification" />
-                  <PrivateRoute component={User} path="/user" />
-                  <PrivateRoute component={Reviews} path="/reviews" />
-                  <PrivateRoute component={Hall} path="/hall" />
-                  <PrivateRoute component={FinanceChart} path="/financechart" />
-                  <PrivateRoute component={FinanceList} path="/financelist" />
-                  <PrivateRoute component={Locations} path="/location" />
-                  <PrivateRoute component={Orders} path="/order" />
-                  <PrivateRoute component={Category} path="/category" />
-                  <PrivateRoute component={HomePage} path="/" exact />
-                </DashBoard>
-              </div>
-            </Wrapper>
-          </Switch>
-        </BrowserRouter>
+      <BrowserRouter>
+        <Switch>
+          <Wrapper>
+            <TopBar />
+            <div className='flex-container'>
+              <SideBar />
+              <DashBoard showButton={pageLocation === '/category'} showInput={pageLocation === '/category'} >
+                <PublicRoute component={LogIn} path="/login" />
+                <PrivateRoute component={SpecialOfferEdit} path="/specialoffer/item/edit/" />
+                <PrivateRoute component={CategoryItemEdit} path="/category/item/edit/" />
+                <PrivateRoute component={Staff} path="/staff" />
+                <PrivateRoute component={Partners} path="/partners" />
+                <PrivateRoute component={Requisities} path="/requisities" />
+                <PrivateRoute component={Delivery} path="/delivery" />
+                <PrivateRoute component={SpecialOffers} path="/specialoffers" />
+                <PrivateRoute component={PushNotification} path="/pushnotification" />
+                <PrivateRoute component={User} path="/user" />
+                <PrivateRoute component={Reviews} path="/reviews" />
+                <PrivateRoute component={Hall} path="/hall" />
+                <PrivateRoute component={FinanceChart} path="/financechart" />
+                <PrivateRoute component={FinanceList} path="/financelist" />
+                <PrivateRoute component={Locations} path="/location" />
+                <PrivateRoute component={Orders} path="/order" />
+                <PrivateRoute component={Category} path="/category" />
+                <PrivateRoute component={HomePage} path="/" exact />
+              </DashBoard>
+            </div>
+          </Wrapper>
+        </Switch>
+      </BrowserRouter>
 
     </div>
   );
