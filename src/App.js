@@ -39,7 +39,7 @@ const App = () => {
               <TopBar />
               <div className='flex-container'>
                 <SideBar />
-                <DashBoard showButton={pageLocation === '/category'} showInput={pageLocation === '/category'} >
+                <DashBoard showButton={pageLocation === '/category'} showInput={pageLocation === '/category'}>
                   <PublicRoute component={LogIn} path="/login" />
                   <PrivateRoute component={SpecialOfferEdit} path="/specialoffer/item/edit/" />
                   <PrivateRoute component={CategoryItemEdit} path="/category/item/edit/" />

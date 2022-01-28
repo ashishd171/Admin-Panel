@@ -2,13 +2,18 @@ import styled from "styled-components";
 
 export const MainBox = styled.div`
     display:flex;
-    width:100%;
-`;
+    // width:100%;
+    background: #ffffff;
+    margin: 24px;
 
+
+`;
+export const TableWrap = styled.div`
+    background: #ffffff;
+`
 export const TableBox = styled.div`
     // width:100%;
-    background-color: #fff;
-    margin: 24px;
+    background: #fff;
 `;
 
 export const TH1 = styled.td`

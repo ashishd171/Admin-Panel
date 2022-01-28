@@ -51,6 +51,24 @@ export const Wrapper = styled.div`
     .dropdownMenu{
         width: 100%;
         padding: 0;
+        position: unset !important;
+        inset: unset !important;;
+        transform: unset !important;
+        overflow: auto;
+        height: 200px;
+        animation: growDown 500ms ease-in-out !important;
+        transform-origin: top center;
+    }
+    @keyframes growDown {
+        0% {
+            transform: scaleY(0)
+        }
+        80% {
+            transform: scaleY(1.1)
+        }
+        100% {
+            transform: scaleY(1)
+        }
     }
     .dropdownItem{
         list-style-type: none;
@@ -90,6 +108,7 @@ export const UnorderList = styled.ul`
     padding-left: 0;
 `
 export const List = styled.li`
+    cursor: pointer;
     display: flex;
     align: items: center;
     list-style-type: none;

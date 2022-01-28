@@ -1,11 +1,15 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import Header from '../Header';
 import { Wrapper } from './style'
 
 const DashBoard = ({ children, showButton, showInput, listgridbtn, productDesign, handleProduct }) => {
     
-    const pageLocation = window.location.pathname
-    console.log(pageLocation, "Dashboard")
+    
+    useEffect(() => {
+        const pageLocation = window.location.pathname
+        console.log(pageLocation, "Dashboard")
+        
+    },[window]);
     
     return (
         <Wrapper>   
