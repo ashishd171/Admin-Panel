@@ -22,13 +22,11 @@ import HallList from '../../Pages/Settings/Hall/HallList';
 import Partners from '../../Pages/Settings/Partners';
 import Staff from '../../Pages/Settings/Staff';
 
-const SideBar = () => {
+const SideBar = ({showButton,listgridbtn}) => {
 
     const history = useHistory();
     const [open, setOpen] = useState(false);
     const [active, setActive] = useState(null);
-    const array1=[1,2,3,4,5,6,7,8,9]
-    console.log(array1[0])
 
     const obj = [
         {
@@ -38,6 +36,9 @@ const SideBar = () => {
             outlineIcon: <AiOutlineHome />, solidIcon: <AiTwotoneHome />,
             path: "/",
             component: <HomePage />,
+            showButton:"false",
+            p:['SHOW_BUTTON'],
+            listgridbtn:"false"
         },
         {
             id: "2",
@@ -46,6 +47,8 @@ const SideBar = () => {
             outlineIcon: <BsGrid />, solidIcon: <BsGridFill />,
             path: "/category",
             component: <Category />,
+            showButton:"true",
+            listgridbtn:"true"
         },
         {
             id: "3",
@@ -180,7 +183,7 @@ const SideBar = () => {
                                             {(active === item.id && open) ? item.solidIcon : item.outlineIcon}
                                             {item.menuname} {open && active === item.id ? <IoIosArrowUp className='arrowdown' /> : <IoIosArrowDown className='arrowdown' />}
                                         </DropdownToggle>
-                                        <DropdownMenu className="dropdownMenu" >
+                                        <DropdownMenu className="dropdownMenu">
                                             {active && active === item.id && item.child.map((childitem, i) => {
                                                 { console.log("childer", childitem.name, i) }
                                                 return (

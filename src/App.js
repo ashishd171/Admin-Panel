@@ -28,9 +28,6 @@ import SpecialOfferEdit from './components/SpecialOfferList/SpecialOfferEdit';
 
 const App = () => {
 
-  const pageLocation = window.location.pathname
-  console.log(pageLocation, 'app')
-
   return (
     <div className="App">
         <BrowserRouter>
@@ -39,7 +36,7 @@ const App = () => {
               <TopBar />
               <div className='flex-container'>
                 <SideBar />
-                <DashBoard showButton={pageLocation === '/category'} showInput={pageLocation === '/category'}>
+                <DashBoard>
                   <PublicRoute component={LogIn} path="/login" />
                   <PrivateRoute component={SpecialOfferEdit} path="/specialoffer/item/edit/" />
                   <PrivateRoute component={CategoryItemEdit} path="/category/item/edit/" />

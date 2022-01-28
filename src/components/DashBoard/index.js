@@ -7,7 +7,6 @@ const DashBoard = ({ children, showButton, showInput, listgridbtn, productDesign
     
     useEffect(() => {
         const pageLocation = window.location.pathname
-        console.log(pageLocation, "Dashboard")
         
     },[window]);
     
