@@ -1,8 +1,6 @@
-import react, { useState } from "react";
-import AllOrderTable from "../../Order/Table";
 import PageNumber from "../PageNumber";
 import Table from './style';
-import { MainBox, TH1, TH2, TH3, TH4, TH5, TH6, TableBox, RattingIcon, } from './style'
+import { MainBox,TableWrap, TH1, TH2, TH3, TH4, TH5, TH6, TableBox, RattingIcon, } from './style'
 
 const ReviewTable = () => {
 
@@ -23,8 +21,10 @@ const ReviewTable = () => {
         { Ratting: "./icons/star.png" },
     ]
     return (
+        <>
         <MainBox>
             <TableBox>
+                <TableWrap>
                 <Table.Table>
                     <Table.Head>
                         <Table.TR>
@@ -61,8 +61,10 @@ const ReviewTable = () => {
                     </Table.Body>
                 </Table.Table>
                 <PageNumber />
+                </TableWrap>
             </TableBox>
-        </MainBox>
+            </MainBox>
+        </>
     )
 }
 

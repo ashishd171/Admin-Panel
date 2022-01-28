@@ -8,10 +8,14 @@ export const MainBox = styled.div`
     }
 `;
 
+
+`;
+export const TableWrap = styled.div`
+    background: #ffffff;
+`
 export const TableBox = styled.div`
     // width:100%;
-    background-color: #fff;
-    margin: 24px;
+    background: #fff;
 `;
 
 export const TH1 = styled.td`

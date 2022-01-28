@@ -1,146 +1,206 @@
 import React, { useState, useEffect } from 'react';
-import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Dropdown } from 'reactstrap';
-import { Wrapper, Sidebar, MenuBar, Home, UnorderList, List, Anchor, dropdown } from './style';
+import { DropdownToggle, DropdownMenu, DropdownItem, Dropdown } from 'reactstrap';
+import { Wrapper, Sidebar, MenuBar, UnorderList, List, Anchor } from './style';
 import { AiTwotoneHome, AiOutlineSetting, AiFillSetting, AiOutlineHome } from "react-icons/ai";
-import { BsGridFill, BsGrid } from "react-icons/bs";
-import { BsBell, BsFillBellFill, BsChatLeftDots, BsChatLeftDotsFill } from "react-icons/bs";
-import { BsBarChartLineFill, BsBarChartLine } from "react-icons/bs";
+import { BsPeople, BsPeopleFill, BsBell, BsFillBellFill, BsChatLeftDots, BsChatLeftDotsFill, BsGridFill, BsGrid, BsBarChartLineFill, BsBarChartLine } from "react-icons/bs";
 import { IoDocumentTextOutline, IoDocumentTextSharp } from "react-icons/io5";
-import { BsPeople, BsPeopleFill } from "react-icons/bs";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { useHistory } from 'react-router-dom';
+import HomePage from '../../Pages/HomePage';
+import Category from '../../Pages/Category';
+import Orders from '../../Pages/Orders';
+import User from '../../Pages/User';
+import Reviews from '../../Pages/Reviews';
+import PushNotificationList from '../PushNotification/PushNotificationList';
+import FinanceList from '../../Pages/Finance/FinanceList';
+import FinanceChart from '../../Pages/Finance/FinanceChart';
+import Locations from '../../Pages/Settings/Locations';
+import SpecialOfferList from '../SpecialOfferList';
+import Delivery from '../../Pages/Settings/Delivery';
+import Requisities from '../../Pages/Settings/Requisities';
+import HallList from '../../Pages/Settings/Hall/HallList';
+import Partners from '../../Pages/Settings/Partners';
+import Staff from '../../Pages/Settings/Staff';
 
-const SideBar = () => {
+const SideBar = ({showButton,listgridbtn}) => {
 
     const history = useHistory();
-
     const [open, setOpen] = useState(false);
-    const [opensecond, setOpenSecond] = useState(false);
+    const [active, setActive] = useState(null);
 
-    const [icon, setIcon] = useState("home");
-    const handleActive = (val) => {
-        setIcon(val)
-    }
+    const obj = [
+        {
+            id: "1",
+            type: "single",
+            name: "Головна",
+            outlineIcon: <AiOutlineHome />, solidIcon: <AiTwotoneHome />,
+            path: "/",
+            component: <HomePage />,
+            showButton:"false",
+            p:['SHOW_BUTTON'],
+            listgridbtn:"false"
+        },
+        {
+            id: "2",
+            type: "single",
+            name: "Категорії",
+            outlineIcon: <BsGrid />, solidIcon: <BsGridFill />,
+            path: "/category",
+            component: <Category />,
+            showButton:"true",
+            listgridbtn:"true"
+        },
+        {
+            id: "3",
+            type: "single",
+            name: "Замовлення",
+            outlineIcon: <IoDocumentTextOutline />, solidIcon: <IoDocumentTextSharp />,
+            path: "/order",
+            component: <Orders />,
+        },
+        {
+            id: "4",
+            type: "single",
+            name: "Користувачі",
+            outlineIcon: <BsPeople />, solidIcon: <BsPeopleFill />,
+            path: "/user",
+            component: <User />,
+        },
+        {
+            id: "5",
+            type: "single",
+            name: "Відгуки",
+            outlineIcon: <BsChatLeftDots />, solidIcon: <BsChatLeftDotsFill />,
+            path: "/reviews",
+            component: <Reviews />,
+        },
+        {
+            id: "6",
+            type: "single",
+            name: "Push Нотіфікації",
+            outlineIcon: <BsBell />, solidIcon: <BsFillBellFill />,
+            path: "/pushnotification",
+            component: <PushNotificationList />,
+        },
+        {
+            id: "7",
+            type: "multiple",
+            menuname: "Фінанси",
+            outlineIcon: <BsBarChartLine />, solidIcon: <BsBarChartLineFill />,
+            child: [
+                {
+                    id: "1",
+                    name: "Дохід",
+                    component: <FinanceList />,
+                    path: "/financelist",
+                },
+                {
+                    id: "2",
+                    name: "Акції",
+                    component: <FinanceChart />,
+                    path: "/financechart",
+                }
+            ]
+        },
+        {
+            id: "8",
+            type: "multiple",
+            menuname: "Налаштування",
+            outlineIcon: <AiOutlineSetting />, solidIcon: <AiFillSetting />,
+            component: <PushNotificationList />,
+            child: [
+                {
+                    id: "1",
+                    name: "Локації",
+                    path: "/location",
+                    component: <Locations />,
+                },
+                {
+                    id: "2",
+                    name: "Акції ",
+                    path: "specialoffers",
+                    component: <SpecialOfferList />,
+                },
+                {
+                    id: "3",
+                    name: "Доставка",
+                    path: "delivery",
+                    component: <Delivery />,
+                },
+                {
+                    id: "4",
+                    name: "Реквізити",
+                    path: "requisities",
+                    component: <Requisities />,
+                },
+                {
+                    id: "5",
+                    name: "Зал",
+                    path: "/hall",
+                    component: <HallList />,
+                },
+                {
+                    id: "6",
+                    name: "Партнери",
+                    path: "partners",
+                    component: <Partners />,
+                },
+                {
+                    id: "7",
+                    name: "Персонал",
+                    path: "staff",
+                    component: <Staff />,
+                }
+            ]
+        }
+    ];
+    useEffect(() => {
+        setActive(obj[0].id)
+    }, []);
 
+    
     return (
         <Wrapper>
             <Sidebar>
                 <MenuBar>
                     <UnorderList>
-                        <List>{icon === 'home' ? <AiTwotoneHome /> : <AiOutlineHome />}
-                            <Anchor selected={icon === 'home'} onClick={(event) => {
-                                history.push('/')
-                                handleActive('home')
-                            }}>Головна</Anchor>
-                        </List>
+                        {obj.map((item, index) => {
+                            return <>{item.type === 'single' ?
+                                <List key={index}
+                                    onClick={() => {
+                                        setActive(item.id)
+                                        history.push(item.path)
+                                    }}>
+                                    {item.id === active ? item.solidIcon : item.outlineIcon}
+                                    <Anchor selected={active === item.id}
+                                    >{item.name}
+                                    </Anchor>
+                                </List> : item.type === 'multiple' ?
+                                    <Dropdown isOpen={open && active === item.id} >
+                                        <DropdownToggle onClick={() => {
+                                            setOpen(!open); setActive(item.id);
+                                        }} className="toggler">
+                                            {(active === item.id && open) ? item.solidIcon : item.outlineIcon}
+                                            {item.menuname} {open && active === item.id ? <IoIosArrowUp className='arrowdown' /> : <IoIosArrowDown className='arrowdown' />}
+                                        </DropdownToggle>
+                                        <DropdownMenu className="dropdownMenu">
+                                            {active && active === item.id && item.child.map((childitem, i) => {
+                                                { console.log("childer", childitem.name, i) }
+                                                return (
+                                                    <DropdownItem className="dropdownItem" key={i}
+                                                        onClick={() => {
+                                                            history.push(childitem.path)
+                                                        }}>
+                                                        <Anchor>{childitem.name}</Anchor>
+                                                    </DropdownItem>
+                                                )
+                                            })}
+                                        </DropdownMenu>
 
-                        <List>{icon === 'category' ? <BsGridFill /> : <BsGrid />}
-                            <Anchor selected={icon === 'category'} onClick={(event) => {
-                                history.push('/category')
-                                handleActive('category')
-                            }}>Категорії</Anchor>
-                        </List>
-
-                        <List>{icon === 'order' ? <IoDocumentTextSharp /> : <IoDocumentTextOutline />}
-                            <Anchor selected={icon === 'order'} onClick={(event) => {
-                                history.push('/order')
-                                handleActive('order');
-                            }}>Замовлення</Anchor>
-                        </List>
-
-                        <List>{icon === 'user' ? <BsPeopleFill /> : <BsPeople />}
-                            <Anchor selected={icon === 'user'} onClick={(event) => {
-                                history.push('/user')
-                                handleActive('user')
-                            }}>Користувачі</Anchor>
-                        </List>
-
-                        <List>{icon === 'reviews' ? <BsChatLeftDotsFill /> : <BsChatLeftDots />}
-                            <Anchor selected={icon === 'reviews'} onClick={(event) => {
-                                history.push('/reviews')
-                                handleActive('reviews')
-                            }}>Відгуки</Anchor>
-                        </List>
-
-                        <List>{icon === 'pushnotification' ? <BsFillBellFill /> : <BsBell />}
-                            <Anchor selected={icon === 'pushnotification'} onClick={(event) => {
-                                history.push('/pushnotification')
-                                handleActive('pushnotification')
-                            }}>Push Нотіфікації</Anchor>
-                        </List>
-
-                        <Dropdown isOpen={open}>
-                            <DropdownToggle selected={icon === open} onClick={() => { setOpen(!open); setIcon('finance'); setOpenSecond(false) }} className="toggler">
-                                {icon === 'finance' ? <BsBarChartLineFill /> : <BsBarChartLine />}
-                                Фінанси {open ? <IoIosArrowUp className='arrowdown' /> : <IoIosArrowDown className='arrowdown' />}
-                            </DropdownToggle>
-
-                            <DropdownMenu className="dropdownMenu">
-                                <DropdownItem className="dropdownItem">
-                                    <Anchor clicked={icon === 'finance'} onClick={() => {
-
-                                        handleActive('finance')
-                                        history.push(`/financelist`)
-                                    }} >Дохід</Anchor></DropdownItem>
-                                <DropdownItem className="dropdownItem">
-                                    <Anchor onClick={() => {
-
-                                        handleActive('finance')
-                                        history.push(`/financechart`)
-                                    }} >Акції</Anchor></DropdownItem>
-                            </DropdownMenu>
-                        </Dropdown>
-
-                        <Dropdown isOpen={opensecond} >
-                            <DropdownToggle onClick={() => { setOpenSecond(!opensecond); setOpen(false) }} className="toggler">
-                                {icon === 'setting' ? <AiFillSetting /> : <AiOutlineSetting />}
-                                Налаштування {opensecond ? <IoIosArrowUp className='arrowdown' /> : <IoIosArrowDown className='arrowdown' />}
-                            </DropdownToggle>
-
-                            <DropdownMenu className="dropdownMenu">
-                                <DropdownItem className="dropdownItem"><Anchor onClick={() => {
-                                    handleActive('setting')
-                                    history.push(`/location`)
-                                }} >Локації</Anchor>
-                                </DropdownItem>
-
-                                <DropdownItem className="dropdownItem"><Anchor onClick={() => {
-                                    handleActive('setting')
-                                    history.push(`/specialoffers`)
-                                }} >Акції</Anchor>
-                                </DropdownItem>
-
-                                <DropdownItem className="dropdownItem"><Anchor onClick={() => {
-                                    handleActive('setting')
-                                    history.push(`/delivery`)
-                                }} >Доставка</Anchor>
-                                </DropdownItem>
-
-                                <DropdownItem className="dropdownItem"><Anchor onClick={() => {
-                                    handleActive('setting')
-                                    history.push(`/requisities`)
-                                }} >Реквізити</Anchor>
-                                </DropdownItem>
-
-                                <DropdownItem className="dropdownItem"><Anchor onClick={() => {
-                                    handleActive('setting')
-                                    history.push(`/hall`)
-                                }}>Зал</Anchor>
-                                </DropdownItem>
-
-                                <DropdownItem className="dropdownItem"><Anchor onClick={() => {
-                                    handleActive('setting')
-                                    history.push(`/partners`)
-                                }} >Партнери</Anchor>
-                                </DropdownItem>
-
-                                <DropdownItem className="dropdownItem"><Anchor onClick={() => {
-                                    handleActive('setting')
-                                    history.push(`/staff`)
-                                }} >Персонал</Anchor>
-                                </DropdownItem>
-                            </DropdownMenu>
-                        </Dropdown>
+                                    </Dropdown>
+                                    : null}
+                            </>
+                        })}
                     </UnorderList>
                 </MenuBar>
             </Sidebar>

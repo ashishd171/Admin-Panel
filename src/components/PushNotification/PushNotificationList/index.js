@@ -36,7 +36,7 @@ const PushNotificationList = () => {
                     <Table.Body>
                         {TableRow.map((items, index) => {
                             return (
-                                <Table.TR>
+                                <Table.TR key={index}>
                                     <Table.TD>{items.Date}</Table.TD>
                                     <Table.TD>{rattingImg.map((img, index) => {
                                             return (
