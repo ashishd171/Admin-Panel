@@ -14,51 +14,51 @@ const data = {
         { Image: "./images/Sweetsimage.png", name: "Солодощі", type: 'sweets' }
     ],
     'pizza': [
-        { Image: "./images/paperoni.svg", name: "Піца", type: 'pizza' },
-        { Image: "./images/hawaii pizza.png", name: "ПіНапоїца" },
-        { Image: "./images/cheese pizza.png", name: "Гарячі напої" },
-        { Image: "./images/meat pizza.png", name: "Ланчі" },
-        { Image: "./images/bavarska pizza.png", name: "Снеки" },
+        { Image: "./images/paperoni.svg", name: "Піца", price: "110 грн"},
+        { Image: "./images/hawaii pizza.png",  price: "110 грн",name: "ПіНапоїца" },
+        { Image: "./images/cheese pizza.png",  price: "110 грн",name: "Гарячі напої" },
+        { Image: "./images/meat pizza.png",  price: "110 грн",name: "Ланчі" },
+        { Image: "./images/bavarska pizza.png",  price: "110 грн",name: "Снеки" },
     ],
     'juice': [
-        { Image: "./images/Juiceimage.png", name: "ПіНапоїца", type: 'juice' },
-        { Image: "./images/Juiceimage.png", name: "ПіНапоїца" },
-        { Image: "./images/Juiceimage.png", name: "ПіНапоїца" },
-        { Image: "./images/Juiceimage.png", name: "ПіНапоїца" },
-        { Image: "./images/Juiceimage.png", name: "ПіНапоїца" },
-        { Image: "./images/Juiceimage.png", name: "ПіНапоїца" },
+        { Image: "./images/Juiceimage.png",  price: "800 грн",name: "ПіНапоїца", },
+        { Image: "./images/Juiceimage.png",  price: "110 грн",name: "ПіНапоїца" },
+        { Image: "./images/Juiceimage.png",  price: "110 грн",name: "ПіНапоїца" },
+        { Image: "./images/Juiceimage.png",  price: "110 грн",name: "ПіНапоїца" },
+        { Image: "./images/Juiceimage.png",  price: "110 грн",name: "ПіНапоїца" },
+        { Image: "./images/Juiceimage.png",  price: "110 грн",name: "ПіНапоїца" },
     ],
     'hotdrink': [
-        { Image: "./images/Hotdrinks.png", name: "Піца", type: 'hotdrink' },
-        { Image: "./images/Hotdrinks.png", name: "ПіНапоїца" },
-        { Image: "./images/Hotdrinks.png", name: "Гарячі напої" },
-        { Image: "./images/Hotdrinks.png", name: "Ланчі" },
-        { Image: "./images/Hotdrinks.png", name: "Снеки" },
-        { Image: "./images/Hotdrinks.png", name: "Солодощі" }
+        { Image: "./images/Hotdrinks.png",  price: "110 грн",name: "Піца", },
+        { Image: "./images/Hotdrinks.png",  price: "110 грн",name: "ПіНапоїца" },
+        { Image: "./images/Hotdrinks.png",  price: "110 грн",name: "Гарячі напої" },
+        { Image: "./images/Hotdrinks.png",  price: "110 грн",name: "Ланчі" },
+        { Image: "./images/Hotdrinks.png",  price: "110 грн",name: "Снеки" },
+        { Image: "./images/Hotdrinks.png",  price: "110 грн",name: "Солодощі" }
     ],
     'lunch': [
-        { Image: "./images/Lunchcard.svg", name: "Піца", type: 'lunch' },
-        { Image: "./images/Lunchcard.svg", name: "ПіНапоїца" },
-        { Image: "./images/Lunchcard.svg", name: "Гарячі напої" },
-        { Image: "./images/Lunchcard.svg", name: "Ланчі" },
-        { Image: "./images/Lunchcard.svg", name: "Снеки" },
-        { Image: "./images/Lunchcard.svg", name: "Солодощі" }
+        { Image: "./images/Lunchcard.svg",  price: "110 грн",name: "Піца", },
+        { Image: "./images/Lunchcard.svg",  price: "110 грн",name: "ПіНапоїца" },
+        { Image: "./images/Lunchcard.svg",  price: "110 грн",name: "Гарячі напої" },
+        { Image: "./images/Lunchcard.svg",  price: "110 грн",name: "Ланчі" },
+        { Image: "./images/Lunchcard.svg",  price: "110 грн",name: "Снеки" },
+        { Image: "./images/Lunchcard.svg",  price: "110 грн",name: "Солодощі" }
     ],
     'snaks': [
-        { Image: "./images/Snacksimage.png", name: "Піца", type: 'snaks' },
-        { Image: "./images/Snacksimage.png", name: "ПіНапоїца" },
-        { Image: "./images/Snacksimage.png", name: "Гарячі напої" },
-        { Image: "./images/Snacksimage.png", name: "Ланчі" },
-        { Image: "./images/Snacksimage.png", name: "Снеки" },
-        { Image: "./images/Snacksimage.png", name: "Солодощі" }
+        { Image: "./images/Snacksimage.png",  price: "110 грн",name: "Піца",},
+        { Image: "./images/Snacksimage.png",  price: "110 грн",name: "ПіНапоїца" },
+        { Image: "./images/Snacksimage.png",  price: "110 грн",name: "Гарячі напої" },
+        { Image: "./images/Snacksimage.png",  price: "110 грн",name: "Ланчі" },
+        { Image: "./images/Snacksimage.png",  price: "110 грн",name: "Снеки" },
+        { Image: "./images/Snacksimage.png",  price: "110 грн",name: "Солодощі" }
     ],
     'sweets': [
-        { Image: "./images/Sweetsimage.png", name: "Піца", type: 'sweets' },
-        { Image: "./images/Sweetsimage.png", name: "ПіНапоїца" },
-        { Image: "./images/Sweetsimage.png", name: "Гарячі напої" },
-        { Image: "./images/Sweetsimage.png", name: "Ланчі" },
-        { Image: "./images/Sweetsimage.png", name: "Снеки" },
-        { Image: "./images/Sweetsimage.png", name: "Солодощі" }
+        { Image: "./images/Sweetsimage.png",  price: "110 грн",name: "Піца", },
+        { Image: "./images/Sweetsimage.png",  price: "110 грн",name: "ПіНапоїца" },
+        { Image: "./images/Sweetsimage.png",  price: "110 грн",name: "Гарячі напої" },
+        { Image: "./images/Sweetsimage.png",  price: "110 грн",name: "Ланчі" },
+        { Image: "./images/Sweetsimage.png",  price: "110 грн",name: "Снеки" },
+        { Image: "./images/Sweetsimage.png",  price: "110 грн",name: "Солодощі" }
     ]
 }
 
@@ -67,24 +67,24 @@ const Category = (props) => {
     const [productList, setProductList] = useState(data[optionSelected]);
 
     useEffect(() => {
-        console.log(optionSelected, data[optionSelected])
         setProductList(data[optionSelected]);
     }, [optionSelected]);
 
-    const CatagoryCard = [
-        { Image: "./images/Pizzaimage.png", name: "Піца" },
-        { Image: "./images/Juiceimage.png", name: "ПіНапоїца" },
-        { Image: "./images/Hotdrinks.png", name: "Гарячі напої" },
-        { Image: "./images/Lunchcard.svg", name: "Ланчі" },
-        { Image: "./images/Snacksimage.png", name: "Снеки" },
-        { Image: "./images/Sweetsimage.png", name: "Солодощі" }
-    ]
+
 
     const [isModal, setIsModal] = useState(false);
     const handleModal = () => {
         setIsModal(!isModal)
     }
+    useEffect(() => {
+        return () => {
+            console.log(isModal, 'returning')
+            handleModal()
+        };
+    }, []);
+
     const history = useHistory()
+    console.log(isModal, 'render',props.handleProduct && !isModal)
     return (
         <div>
             {

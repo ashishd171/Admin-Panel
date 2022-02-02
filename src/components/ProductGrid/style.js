@@ -51,6 +51,14 @@ export const BottomSection = styled.div`
     background: #FFFFFF;
     padding: ${prop => prop.Category ?  '14px 16px' : ' 7px 16px' };
 `
+export const PriceSection = styled.div`
+    display: flex;
+    background: #FFFFFF;
+    padding: ${prop => prop.Category ?  '8px 16px' : ' 8px 16px' };
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+`
 export const Dot = styled.span`
     background: green;
     border-radius: 50%;

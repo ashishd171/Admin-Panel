@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Wrapper, ProdTable, TableBody, TableRow, TableDatafirst, TableDataSecond, TableData, Image, Span, TableHeadingFirst, TableHeadingPhoto, TableHeadingStatus, TableHeadingNizwa, TableHeadingEdit, Anchor } from './style'
 import { HiOutlinePencil } from "react-icons/hi";
 import { useHistory } from "react-router-dom";
