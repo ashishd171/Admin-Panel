@@ -31,13 +31,9 @@ const ProductList = ({ toggle, isModal }) => {
                                         <TableDataSecond><Anchor href="#"><Image src="./images/userphoto.svg" /></Anchor></TableDataSecond>
                                         <TableData><Span></Span>Aктивный</TableData>
                                         <TableData>Пiцa</TableData>
-                                        <TableData><Anchor onClick={() => toggle()}
-                                            // onClick={(event)=>{
-                                            //     event.preventDefault()
-                                            //     history.push('/category/item/edit/'+index)}}
-                                            href="#"><HiOutlinePencil /></Anchor>
+                                        <TableData>
+                                            <Anchor onClick={() => toggle()}><HiOutlinePencil /></Anchor>
                                         </TableData>
-
                                     </TableRow>
                                 )
                             })}

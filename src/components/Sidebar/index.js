@@ -22,149 +22,126 @@ import HallList from '../../Pages/Settings/Hall/HallList';
 import Partners from '../../Pages/Settings/Partners';
 import Staff from '../../Pages/Settings/Staff';
 
-const SideBar = ({showButton,listgridbtn}) => {
+const SideBar = () => {
 
     const history = useHistory();
     const [open, setOpen] = useState(false);
     const [active, setActive] = useState(null);
 
-    const obj = [
-        {
-            id: "1",
+    const Array = [
+        {   id: "1",
             type: "single",
             name: "Головна",
             outlineIcon: <AiOutlineHome />, solidIcon: <AiTwotoneHome />,
             path: "/",
-            component: <HomePage />,
-            showButton:"false",
-            p:['SHOW_BUTTON'],
-            listgridbtn:"false"
+            component: <HomePage />
         },
-        {
-            id: "2",
+        {   id: "2",
             type: "single",
             name: "Категорії",
             outlineIcon: <BsGrid />, solidIcon: <BsGridFill />,
             path: "/category",
-            component: <Category />,
-            showButton:"true",
-            listgridbtn:"true"
+            component: <Category />
         },
-        {
-            id: "3",
+        {   id: "3",
             type: "single",
             name: "Замовлення",
             outlineIcon: <IoDocumentTextOutline />, solidIcon: <IoDocumentTextSharp />,
             path: "/order",
-            component: <Orders />,
+            component: <Orders />
         },
-        {
-            id: "4",
+        {   id: "4",
             type: "single",
             name: "Користувачі",
             outlineIcon: <BsPeople />, solidIcon: <BsPeopleFill />,
             path: "/user",
-            component: <User />,
+            component: <User />
         },
-        {
-            id: "5",
+        {   id: "5",
             type: "single",
             name: "Відгуки",
             outlineIcon: <BsChatLeftDots />, solidIcon: <BsChatLeftDotsFill />,
             path: "/reviews",
-            component: <Reviews />,
+            component: <Reviews />
         },
-        {
-            id: "6",
+        {   id: "6",
             type: "single",
             name: "Push Нотіфікації",
             outlineIcon: <BsBell />, solidIcon: <BsFillBellFill />,
             path: "/pushnotification",
-            component: <PushNotificationList />,
+            component: <PushNotificationList />
         },
-        {
-            id: "7",
+        {   id: "7",
             type: "multiple",
             menuname: "Фінанси",
             outlineIcon: <BsBarChartLine />, solidIcon: <BsBarChartLineFill />,
             child: [
-                {
-                    id: "1",
+                {   id: "1",
                     name: "Дохід",
                     component: <FinanceList />,
-                    path: "/financelist",
+                    path: "/financelist"
                 },
-                {
-                    id: "2",
+                {   id: "2",
                     name: "Акції",
                     component: <FinanceChart />,
-                    path: "/financechart",
+                    path: "/financechart"
                 }
             ]
         },
-        {
-            id: "8",
+        {   id: "8",
             type: "multiple",
             menuname: "Налаштування",
             outlineIcon: <AiOutlineSetting />, solidIcon: <AiFillSetting />,
             component: <PushNotificationList />,
             child: [
-                {
-                    id: "1",
+                {   id: "1",
                     name: "Локації",
                     path: "/location",
-                    component: <Locations />,
+                    component: <Locations />
                 },
-                {
-                    id: "2",
+                {   id: "2",
                     name: "Акції ",
                     path: "specialoffers",
-                    component: <SpecialOfferList />,
+                    component: <SpecialOfferList />
                 },
-                {
-                    id: "3",
+                {   id: "3",
                     name: "Доставка",
                     path: "delivery",
-                    component: <Delivery />,
+                    component: <Delivery />
                 },
-                {
-                    id: "4",
+                {   id: "4",
                     name: "Реквізити",
                     path: "requisities",
-                    component: <Requisities />,
+                    component: <Requisities />
                 },
-                {
-                    id: "5",
+                {   id: "5",
                     name: "Зал",
                     path: "/hall",
-                    component: <HallList />,
+                    component: <HallList />
                 },
-                {
-                    id: "6",
+                {   id: "6",
                     name: "Партнери",
                     path: "partners",
-                    component: <Partners />,
+                    component: <Partners />
                 },
-                {
-                    id: "7",
+                {   id: "7",
                     name: "Персонал",
                     path: "staff",
-                    component: <Staff />,
+                    component: <Staff />
                 }
             ]
         }
     ];
     useEffect(() => {
-        setActive(obj[0].id)
+        setActive(Array[0].id)
     }, []);
 
-    
     return (
         <Wrapper>
             <Sidebar>
                 <MenuBar>
                     <UnorderList>
-                        {obj.map((item, index) => {
+                        {Array.map((item, index) => {
                             return <>{item.type === 'single' ?
                                 <List key={index}
                                     onClick={() => {
@@ -185,7 +162,7 @@ const SideBar = ({showButton,listgridbtn}) => {
                                         </DropdownToggle>
                                         <DropdownMenu className="dropdownMenu">
                                             {active && active === item.id && item.child.map((childitem, i) => {
-                                                { console.log("childer", childitem.name, i) }
+                                                // { console.log("childer", childitem.name, i) }
                                                 return (
                                                     <DropdownItem className="dropdownItem" key={i}
                                                         onClick={() => {
@@ -196,7 +173,6 @@ const SideBar = ({showButton,listgridbtn}) => {
                                                 )
                                             })}
                                         </DropdownMenu>
-
                                     </Dropdown>
                                     : null}
                             </>
@@ -205,7 +181,6 @@ const SideBar = ({showButton,listgridbtn}) => {
                 </MenuBar>
             </Sidebar>
         </Wrapper>
-
     );
 }
 export default SideBar;

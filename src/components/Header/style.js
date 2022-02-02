@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
     width: 85%;
     right: 0;
     top: 64px;
+    z-index: 999;
     @media screen and (max-width:767px){
         left:0;
         width:100%;

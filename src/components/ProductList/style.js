@@ -162,4 +162,6 @@ export const Span = styled.span`
     vertical-align: middle;
 `
 
-export const Anchor = styled.a``
+export const Anchor = styled.div`
+    cursor: pointer;
+`

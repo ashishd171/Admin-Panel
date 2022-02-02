@@ -2,7 +2,7 @@ import React from "react";
 import { CgEnter } from "react-icons/cg";
 import A from './Style';
 
-const Button = ({showButton,
+const Button = ({
     border,
     color,
     children,
@@ -22,10 +22,11 @@ const Button = ({showButton,
     alignSelf,
     float,
     display,
-    marginRight
+    marginRight,
+    marginLeft
 }) => {
     return (
-        <> { showButton ?
+        <> 
         <A.Button
             onClick={onClick}
             style={{
@@ -47,12 +48,13 @@ const Button = ({showButton,
                 alignSelf,
                 float,
                 display,
-                marginRight
+                marginRight,
+                marginLeft
             }}
         >
             {children}
         </A.Button>
-        : null}
+       
         </>
 
     );

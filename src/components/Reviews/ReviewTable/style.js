@@ -8,8 +8,6 @@ export const MainBox = styled.div`
     }
 `;
 
-
-`;
 export const TableWrap = styled.div`
     background: #ffffff;
 `

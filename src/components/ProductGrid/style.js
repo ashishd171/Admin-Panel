@@ -1,5 +1,12 @@
 import styled from 'styled-components'
 
+export const Wholewrapper = styled.div`
+    svg{
+        self-align: center;
+        vertical-align: text-bottom;
+    }
+
+`
 export const Wrapper = styled.div`
     padding: 12px;  
     display: flex;
@@ -37,6 +44,7 @@ export const Card = styled.div`
     width: 258px;
     width: ${prop => prop.Category ?  '258px' : '200px' };
     margin: 10px;
+    cursor: pointer;
 `
 export const BottomSection = styled.div`
     display: flex;
