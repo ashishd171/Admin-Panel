@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wholewrapper, Edit, Dot, Wrapper, Name, Card, BottomSection, PriceSection, Image, Anchor } from './style'
+import { Wholewrapper, Edit, Dot, Wrapper, Name, Card, BottomSection, PriceSection, Image, Anchor ,ImageWrap} from './style'
 import { HiOutlinePencil } from "react-icons/hi";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import Button from '../AddButtonNew';
@@ -22,8 +22,10 @@ const ProductGrid = ({ gridStructure, cardType, handleClick ,data}) => {
                                 if (item.type) {
                                     handleClick(item.type)
                                 }
-                            }}>
+                            }}> 
+                                <ImageWrap>
                                 <Image src={item.Image} Category={data === "all"} />
+                                </ImageWrap>
                                 <BottomSection Category={cardType === "Category"}>
                                     <Name><Dot Category={cardType === "Category"}></Dot>{item.name}</Name>
                                     <Edit Category={cardType === "Category"} >

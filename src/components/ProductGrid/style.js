@@ -18,8 +18,15 @@ export const Wrapper = styled.div`
 export const Image = styled.img`
     // width: 258px;
     width: ${prop => prop.Category ?  '258px' : '200px' };
+    :hover{
+        transform: scale(1.05);
+        filter: brightness(1.05);
+        transition: transform 0.4s ease-in-out 0s, opacity 1.63s ease 0s, filter 0.4s ease 0s;
+    }
 
-
+`
+export const ImageWrap = styled.div`
+    overflow: hidden;
 `
 export const Anchor = styled.a`
     color: ${prop => prop.Category ?  '#ffffff' : '#1890FF' };
@@ -45,6 +52,8 @@ export const Card = styled.div`
     width: ${prop => prop.Category ?  '258px' : '200px' };
     margin: 10px;
     cursor: pointer;
+    overflow: hidden;
+
 `
 export const BottomSection = styled.div`
     display: flex;
