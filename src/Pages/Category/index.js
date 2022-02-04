@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import ProductGrid from '../../components/ProductGrid';
-import ProductList from '../../components/ProductList';
-
+import ProductsList from '../../components/ProductsList';
 
 const data = {
     'all': [
@@ -70,8 +69,6 @@ const Category = (props) => {
         setProductList(data[optionSelected]);
     }, [optionSelected]);
 
-
-
     const [isModal, setIsModal] = useState(false);
     const handleModal = () => {
         setIsModal(!isModal)
@@ -89,9 +86,9 @@ const Category = (props) => {
         <div>
             {
                 props.handleProduct && !isModal ?
-                    <ProductGrid CardStructure={productList} handleClick={(option) => setOptionSelected(option)}
-                        Cardtype={"Category"} /> :
-                    <ProductList isModal={isModal} toggle={handleModal} />
+                    <ProductGrid gridStructure={productList} data={optionSelected} handleClick={(option) => setOptionSelected(option)}
+                        cardType={"Category"} /> :
+                    <ProductsList listStructure={productList} isModal={isModal} toggle={handleModal} />
             }
         </div>
     );

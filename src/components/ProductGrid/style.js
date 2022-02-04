@@ -41,7 +41,7 @@ export const Name = styled.p`
     letter-spacing: 0em;
 `
 export const Card = styled.div`
-    width: 258px;
+    // width: 258px;
     width: ${prop => prop.Category ?  '258px' : '200px' };
     margin: 10px;
     cursor: pointer;

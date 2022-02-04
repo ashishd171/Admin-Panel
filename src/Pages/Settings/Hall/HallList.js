@@ -11,7 +11,7 @@ const HallList = () => {
     ]
     return (
         <div>
-            <ProductGrid CardStructure={HallCard} />
+            <ProductGrid gridStructure={HallCard} />
         </div>
     );
 }

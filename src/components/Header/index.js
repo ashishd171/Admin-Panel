@@ -5,11 +5,12 @@ import SearchInput from '../SearchInput';
 import ViewButton from '../ViewButton';
 import { useLocation } from 'react-router-dom';
 
-const Header = ({ productDesign, handleProduct ,handleProductfun}) => {
 
+const Header = ({ productDesign, handleProduct, handleProductfun }) => {
     const [show, setShow] = useState(false);
     const location = useLocation();
-
+    const [handleClick, setHandleClick] = useState(false);
+   
     useEffect(() => {
         if (location.pathname === "/category") {
             setShow(true)
@@ -20,23 +21,23 @@ const Header = ({ productDesign, handleProduct ,handleProductfun}) => {
 
     return (
         <Wrapper>
-            <Title>Головна</Title>
+            <Title>{window.location.pathname.substr(1)}</Title>
             <SubHeading>
-                <SubTitle>Головна</SubTitle>
+                <SubTitle>{window.location.pathname.substr(1)}</SubTitle>
                 {show ?
-                    <Button children={"+ Додати"} />
-                : null}
+                    <Button onClick={setHandleClick} children={"+ Додати"} />
+                    : null}
             </SubHeading>
             <SubWrapper>
                 {show ?
                     <SearchInput />
-                : null}
-                
+                    : null}
+
                 {show ?
                     <ViewButton productDesign={productDesign} handleProduct={handleProduct} handleProductfun={handleProductfun} />
-                : null}
+                    : null}
 
-                </SubWrapper>
+            </SubWrapper>
         </Wrapper>
     );
 }

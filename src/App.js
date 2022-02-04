@@ -59,7 +59,7 @@ const App = () => {
                 <PrivateRoute component={Locations} path="/location" />
                 <PrivateRoute component={Orders} path="/order" />
                 <PrivateRoute component={Category} path="/category" handleProduct={handleProduct} show={show}/>
-                <PrivateRoute component={HomePage} path="/" exact />
+                <PrivateRoute component={HomePage} path="/homepage"  />
               </DashBoard>
             </div>
           </Wrapper>

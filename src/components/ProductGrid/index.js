@@ -4,31 +4,35 @@ import { HiOutlinePencil } from "react-icons/hi";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import Button from '../AddButtonNew';
 
-const ProductGrid = ({ CardStructure, Cardtype, handleClick }) => {
+const ProductGrid = ({ gridStructure, cardType, handleClick ,data}) => {
 
     return (
         <>
             <Wholewrapper>
-                <Button marginTop={20} marginLeft={20} borderRadius={8} onClick={() => handleClick('all')}><MdOutlineArrowBackIosNew />Back</Button>
-
+                {
+                    data==='all' ?
+                        null
+                        : 
+                        <Button marginTop={20} marginLeft={20} borderRadius={8} onClick={() => handleClick('all')}><MdOutlineArrowBackIosNew />Back</Button>
+                }
                 <Wrapper>
-                    {CardStructure?.map((item, index) => {
+                    {gridStructure?.map((item, index) => {
                         return (
-                            <Card key={item.type || index} Category={Cardtype === "Category"} onClick={() => {
+                            <Card key={item.type || index} Category={data === "all"} onClick={() => {
                                 if (item.type) {
                                     handleClick(item.type)
                                 }
                             }}>
-                                <Image src={item.Image} Category={Cardtype === "Category"} />
-                                <BottomSection Category={Cardtype === "Category"}>
-                                    <Name><Dot Category={Cardtype === "Category"}></Dot>{item.name}</Name>
-                                    <Edit Category={Cardtype === "Category"} >
-                                        <Anchor href="" Category={Cardtype === "Category"}><HiOutlinePencil /></Anchor>
+                                <Image src={item.Image} Category={data === "all"} />
+                                <BottomSection Category={cardType === "Category"}>
+                                    <Name><Dot Category={cardType === "Category"}></Dot>{item.name}</Name>
+                                    <Edit Category={cardType === "Category"} >
+                                        <Anchor href="" Category={cardType === "Category"}><HiOutlinePencil /></Anchor>
                                     </Edit>
                                 </BottomSection>
                                 {
                                     item.price ?
-                                        <PriceSection Category={Cardtype === "Category"}>
+                                        <PriceSection Category={cardType === "Category"}>
                                             <Name>{item.price}</Name>
                                         </PriceSection>
                                         : null

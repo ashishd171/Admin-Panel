@@ -4,9 +4,8 @@ import { HiOutlinePencil } from "react-icons/hi";
 import { useHistory } from "react-router-dom";
 import CategoryItemEdit from '../category/CategoryItemEdit';
 
-const ProductList = ({ toggle, isModal }) => {
+const ProductList = ({ toggle, isModal ,listStructure}) => {
     const history = useHistory();
-    const Tabl = [1, 2, 3, 4, 5, 6]
 
     return (
         <div>
@@ -24,13 +23,13 @@ const ProductList = ({ toggle, isModal }) => {
                                 <TableHeadingNizwa>Haзвa</TableHeadingNizwa>
                                 <TableHeadingEdit>Дiя</TableHeadingEdit>
                             </TableRow>
-                            {Tabl.map((items, index) => {
+                            {listStructure.map((item, index) => {
                                 return (
                                     <TableRow key={index}>
                                         <TableDatafirst><Image src="./images/text.svg" /></TableDatafirst>
                                         <TableDataSecond><Anchor href="#"><Image src="./images/userphoto.svg" /></Anchor></TableDataSecond>
-                                        <TableData><Span></Span>Aктивный</TableData>
-                                        <TableData>Пiцa</TableData>
+                                        <TableData><Span></Span>{item.name}</TableData>
+                                        <TableData>{item.name}</TableData>
                                         <TableData>
                                             <Anchor onClick={() => toggle()}><HiOutlinePencil /></Anchor>
                                         </TableData>

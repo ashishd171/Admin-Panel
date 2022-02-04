@@ -21,6 +21,7 @@ import Requisities from '../../Pages/Settings/Requisities';
 import HallList from '../../Pages/Settings/Hall/HallList';
 import Partners from '../../Pages/Settings/Partners';
 import Staff from '../../Pages/Settings/Staff';
+import Hall from '../../Pages/Settings/Hall';
 
 const SideBar = () => {
 
@@ -33,7 +34,7 @@ const SideBar = () => {
             type: "single",
             name: "Головна",
             outlineIcon: <AiOutlineHome />, solidIcon: <AiTwotoneHome />,
-            path: "/",
+            path: "/homepage",
             component: <HomePage />
         },
         {   id: "2",
@@ -117,7 +118,7 @@ const SideBar = () => {
                 {   id: "5",
                     name: "Зал",
                     path: "/hall",
-                    component: <HallList />
+                    component: <Hall />
                 },
                 {   id: "6",
                     name: "Партнери",
