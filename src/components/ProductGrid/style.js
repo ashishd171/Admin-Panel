@@ -36,7 +36,6 @@ export const Anchor = styled.a`
         color: ${prop => prop.Category ?  '#ffffff' : '#1890FF' };
     }
 `
-
 export const Name = styled.p`
     margin: 0;
     flex: 1;
